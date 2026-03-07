@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Optimization Project: Water Access in the Democratic Republic of Congo",
+    "description": "Built scalable optimization pipelines in Julia to identify high-impact locations for new wells in the DRC. The model prioritized well placement to maximize population reach and minimize travel distance, improving projected water access by 19%."
+  },
+  {
+    "title": "Predictive & Prescriptive Solar Battery Charging",
+    "description": "Developed predictive models to forecast solar energy availability and optimization algorithms to determine optimal battery charging, storage, and selling strategies for electricity markets in Southern California."
+  },
+  {
+    "title": "Analytics Lab: Boston Public Health Commission Occupancy Prediction",
+    "description": "Built machine learning models to forecast 14-day homeless shelter occupancy for the Boston Public Health Commission, improving prediction accuracy by 50% and helping reduce overflow risk through better capacity planning."
+  },
+  {
+    "title": "Yelp Sentiment Analysis",
+    "description": "Performed sentiment analysis on Yelp reviews using natural language processing to measure customer satisfaction and identify patterns in user feedback across businesses and categories."
+  },
+  {
+    "title": "Voltage Discharge Prediction & Materials Analysis",
+    "description": "Analyzed sensor data from lab-scale green hydrogen electrolyzers to predict voltage discharge curves and evaluate material performance under intermittent renewable energy conditions."
+  },
+  {
+    "title": "Optimization Project: F1 Race Location Planning",
+    "description": "Developed an optimization model in AMPL to redesign the Formula 1 race calendar to minimize global travel distance while satisfying logistical constraints, reducing estimated emissions by 927 tons of CO₂ per team."
+  },
+  {
+    "title": "MongoDB vs SQL Query Performance Analysis",
+    "description": "Compared relational and non-relational database performance using the Yelp dataset, evaluating query speed, scalability, and usability of SQL versus MongoDB for large-scale analytics tasks."
+  }
+]
