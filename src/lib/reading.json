@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Daisy Jones & The Six",
+    "author": "Taylor Jenkins Reid",
+    "image": "images/daisy.png"
+  },
+  {
+    "title": "Malibu Rising",
+    "author": "Taylor Jenkins Reid",
+    "image": "images/malibu.png"
+  },
+  {
+    "title": "Ready Player One",
+    "author": "Ernest Cline",
+    "image": "images/player.png"
+  },
+  {
+    "title": "Ologies Podcast",
+    "author": "Alie Ward",
+    "image": "images/ologies.png"
+  },
+  {
+    "title": "MIT Technology Review",
+    "author": "Massachusetts Institute of Technology",
+    "image": "images/techmag.png"
+  }
+]
