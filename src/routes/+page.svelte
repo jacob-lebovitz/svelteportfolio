@@ -6,10 +6,10 @@
 </script>
 
 <nav>
-    <a class="current" href="./">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a>
-    <a href="/resume">Resume</a>
+    <a class="current" href=".">Home</a>
+    <a href="projects">Projects</a>
+    <a href="contact">Contact</a>
+    <a href="resume">Resume</a>
     <a href="https://github.com/jacob-lebovitz" target="_blank">GitHub</a>
 </nav>
 <h1>Jacob Lebovitz</h1>
