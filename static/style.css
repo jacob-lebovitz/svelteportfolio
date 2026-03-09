@@ -21,30 +21,6 @@ img {
   height: auto;
 }
 
-nav {
-  display: flex;            
-  margin-bottom: 1em;        
-  border-bottom: 1px solid oklch(81.092% 0.03356 203.838); 
-}
-
-nav a {
-  flex: 1;                 
-  text-align: center;        
-  text-decoration: none;      
-  color: inherit;             
-  padding: 0.5em 0;         
-}
-
-nav a.current {
-  border-bottom: 0.4em solid oklch(84.628% 0.00786 207.769); 
-  padding-bottom: 0.1em;                   
-}
-
-nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
-  padding-bottom: 0.1em;  
-}
 
 input,
 textarea,
