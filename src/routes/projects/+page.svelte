@@ -8,13 +8,7 @@
 
 
 
-<nav>
-    <a href=".">Home</a>
-    <a class="current" href="projects">Projects</a>
-    <a href="contact">Contact</a>
-    <a href="resume">Resume</a>
-    <a href="https://github.com/jacob-lebovitz" target="_blank">GitHub</a>
-</nav>
+
     <h1>{ projects.length } Projects</h1>
     <p>Information and descriptions of Jacob's projects will be listed here:</p>
     <div class="projects">

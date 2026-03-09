@@ -2,13 +2,7 @@
   <title>Contact me</title>
 </svelte:head>
 
-<nav>
-    <a href=".">Home</a>
-    <a href="projects">Projects</a>
-    <a class="current" href="contact">Contact</a>
-    <a href="resume">Resume</a>
-    <a href="https://github.com/jacob-lebovitz" target="_blank">GitHub</a>
-</nav>
+
     <h1>Contact Information</h1>
     <p>You can reach Jacob Lebovitz through the following contact information:</p>
     <form action="mailto:107650576+jacob-lebovitz@users.noreply.github.com" method="GET">
