@@ -9,10 +9,22 @@
     ];
     import { base } from "$app/paths";
     import { page } from "$app/stores";
+    let colorScheme = "light dark";
+
+
 
 
 </script>
 
+<label class="color-scheme-switch">
+    <p>{colorScheme}</p>
+    <select bind:value={colorScheme}>
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+        <option value="light dark">auto</option>
+    </select>
+
+</label>
 
 <nav>
   {#each pages as p}
@@ -29,6 +41,15 @@
 </nav>
 
 <style>
+    .color-scheme-switch {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    font-size: 80%;
+    } 
+
     :root {
     color-scheme: dark;
     }
