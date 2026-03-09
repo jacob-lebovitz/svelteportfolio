@@ -2,7 +2,29 @@
   import projects from "$lib/projects.json";
   import Project from "$lib/Project.svelte";
   import Reading from "$lib/Reading.svelte";
-    import readings from "$lib/reading.json";
+  import readings from "$lib/reading.json";
+  
+  const hour = new Date().getHours();
+
+  let greeting = "";
+  let gradientClass = "";
+
+  if (hour >= 5 && hour < 12) {
+    greeting = "Good morning";
+    gradientClass = "morning";
+  } 
+  else if (hour >= 12 && hour < 17) {
+    greeting = "Good afternoon";
+    gradientClass = "afternoon";
+  } 
+  else if (hour >= 17 && hour < 21) {
+    greeting = "Good evening";
+    gradientClass = "evening";
+  } 
+  else {
+    greeting = "Good night";
+    gradientClass = "night";
+  }
 </script>
 
 
