@@ -1,14 +1,17 @@
 [
   {
     "title": "Optimization Project: Water Access in the Democratic Republic of Congo",
+    "image": "images/opti.png", 
     "description": "Built scalable optimization pipelines in Julia to identify high-impact locations for new wells in the DRC. The model prioritized well placement to maximize population reach and minimize travel distance, improving projected water access by 19%."
   },
   {
-    "title": "Predictive & Prescriptive Solar Battery Charging",
+    "title": "Machine Learning & Optimization: Predictive & Prescriptive Solar Battery Charging",
+    "image": "images/solar.png",
     "description": "Developed predictive models to forecast solar energy availability and optimization algorithms to determine optimal battery charging, storage, and selling strategies for electricity markets in Southern California."
   },
   {
     "title": "Analytics Lab: Boston Public Health Commission Occupancy Prediction",
+    "image": "images/BPHC.png",
     "description": "Built machine learning models to forecast 14-day homeless shelter occupancy for the Boston Public Health Commission, improving prediction accuracy by 50% and helping reduce overflow risk through better capacity planning."
   },
   {

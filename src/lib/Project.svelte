@@ -6,6 +6,9 @@ export let data = {};
 
 <section>
         <header><h2>{data.title}</h2></header>
+        {#if data.image}
+        <img src={data.image} alt="">
+        {/if}
         <p>{data.description}</p>
 </section>
 
