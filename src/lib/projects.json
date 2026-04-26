@@ -4,14 +4,15 @@
     "title": "Conagra Brands · Production Line Scheduling",
     "subtitle": "MIT Sloan Capstone · Data Science Capstone Intern",
     "image": "images/projects/conagra.svg",
-    "categories": ["Optimization", "Industry Capstone", "Forecasting"],
-    "tools": ["Databricks", "SAP", "Power BI", "Python", "Agentic AI"],
+    "categories": ["Optimization"],
+    "tools": ["Databricks", "SAP", "Power BI", "Python", "Agentic AI", "Mixed-Integer Optimization"],
     "highlights": [
-      "Building a production-line scheduling tool that helps plant managers minimize equipment downtime and changeover costs",
-      "Establishing a scalable blueprint for company-wide data standardization across Databricks, SAP, and Power BI",
-      "Integrating an agentic AI solution for responding to unexpected events, enabling real-time schedule adjustments"
+      "Building a production-line scheduling tool that helps plant managers minimize equipment downtime and changeover costs across a multi-line manufacturing facility",
+      "Establishing a scalable blueprint for company-wide data standardization across Databricks, SAP, and Power BI so the same scheduling pipeline can extend to additional plants",
+      "Integrating an agentic AI layer that responds to unexpected events (machine outages, ingredient shortages, demand spikes) and proposes real-time schedule adjustments to the human operator",
+      "Working directly with Conagra plant managers, MIT Sloan faculty advisor Bruce Lawler, and Conagra's analytics leadership team"
     ],
-    "description": "MIT Sloan Master of Business Analytics capstone with Conagra Brands as a Data Science Capstone Intern. The project builds an optimization-driven scheduling tool for production lines, paired with an agentic AI layer for real-time disruption response, and lays the groundwork for company-wide data standardization. Detailed materials are confidential under the program's industry charter, so this entry stays at a high level.",
+    "description": "MIT Sloan Master of Business Analytics capstone with Conagra Brands as a Data Science Capstone Intern. The project pairs an optimization-driven scheduling tool with an agentic AI layer for real-time disruption response, and lays the groundwork for company-wide data standardization. Detailed deliverables are confidential under the program's industry charter, so this entry stays at a high level.",
     "status": "In progress",
     "featured": true,
     "noReport": true
@@ -19,66 +20,74 @@
   {
     "id": "drc-water",
     "title": "Optimization · Water Access in the DRC",
-    "subtitle": "MIT Sloan · Optimization Methods",
-    "image": "images/projects/optimization.svg",
-    "categories": ["Optimization", "Social Impact"],
-    "tools": ["Julia", "JuMP", "Mixed-Integer Optimization", "Geospatial Data"],
+    "subtitle": "MIT Sloan · Optimization Methods · Fall 2025",
+    "image": "images/projects/drc-water.svg",
+    "categories": ["Optimization", "Geospatial"],
+    "tools": ["Julia", "JuMP", "Mixed-Integer Optimization", "Geospatial Data", "K-Means"],
     "highlights": [
-      "Engineered scalable optimization pipelines in Julia / JuMP",
-      "Identified high-impact well locations across the Democratic Republic of Congo that maximize population reach and minimize travel distance",
-      "Improved projected access to water by 19%"
+      "Built a two-stage mixed-integer program in Julia / JuMP: pass 1 maximizes covered population subject to a budget; pass 2 minimizes average walking distance while preserving pass-1 coverage",
+      "Combined a WorldPop population raster (clipped to the DRC) with the Water Point Data Exchange (WPDx) functional / non-functional well dataset",
+      "Compared a uniform square demand grid against a population-weighted K-means grid (K = 100,000); K-means preserved more population and quadrupled neighbor density at a feasible compute cost",
+      "Generated 3,000 candidate well locations by ranking demand cells by unserved population and enforcing a 4.5 km minimum spacing to avoid clustering",
+      "Improved projected access to water by 19% across budget scenarios from $0M to $30M",
+      "Joint work with César Dori"
     ],
-    "description": "MIT Sloan Optimization Methods project applying mixed-integer programming to humanitarian infrastructure planning. The model selects new well locations across the Democratic Republic of Congo to maximize population reached and minimize travel distance to clean water, subject to budget and geographic constraints. Pipelines were built to scale across very large candidate-site sets and to compare multiple policy scenarios.",
+    "description": "MIT Sloan Optimization Methods project applying a two-stage mixed-integer program to humanitarian infrastructure planning. The model selects which existing non-functional wells to repair and where to place new wells across the Democratic Republic of Congo to maximize population reached and minimize walking distance, subject to budget and geographic constraints. Pipelines were built to scale across very large candidate-site sets and to compare multiple budget and grid-construction scenarios.",
     "report": "reports/Optimisation_Report_Overleaf_final (2).pdf",
     "featured": true
   },
   {
     "id": "solar-battery",
     "title": "Predictive + Prescriptive Solar Battery Strategy",
-    "subtitle": "MIT Sloan · Machine Learning Under a Modern Optimization Lens",
-    "image": "images/projects/machine-learning.svg",
-    "categories": ["Machine Learning", "Optimization", "Energy"],
-    "tools": ["Julia", "Python", "Time-Series Forecasting", "Robust Optimization"],
+    "subtitle": "MIT Sloan · 15.095 Machine Learning Under a Modern Optimization Lens · Spring 2026",
+    "image": "images/projects/solar-battery.svg",
+    "categories": ["Machine Learning", "Optimization"],
+    "tools": ["Julia", "Python", "Time-Series Forecasting", "Robust Optimization", "Second-Order Cone Programming"],
     "highlights": [
-      "Designed an optimized schedule in Julia to prescribe battery charging, holding, and selling strategies",
-      "Forecasted next-day solar generation and SDG&E day-ahead market prices",
-      "Built a predictive-to-prescriptive framework with robust optimization to handle price uncertainty",
-      "Increased projected profits by 20%"
+      "Built a predictive-to-prescriptive framework for a solar-paired battery in the SDG&E (San Diego Gas & Electric) market",
+      "Predictive layer: forecasted next-day solar generation from NSRDB irradiance / temperature data and forecasted SDG&E day-ahead Locational Marginal Prices",
+      "Prescriptive layer: an optimization in Julia that prescribes hourly charge / hold / discharge actions subject to physical battery constraints (state-of-charge limits, charge/discharge rates, no grid charging)",
+      "Implemented two robust formulations to handle price uncertainty: an ellipsoidal uncertainty set with a second-order cone penalty (Γₚ = 10) and a budgeted uncertainty set protecting against the worst-case subset of downward price shocks",
+      "Increased projected profits by 20% over a rule-based heuristic baseline, with greater stability under realized price deviations",
+      "Joint work with Justine Murdock under Prof. Dimitris Bertsimas"
     ],
-    "description": "MIT Sloan Machine Learning project that combines predictive modeling and prescriptive optimization to operate a solar-paired battery in San Diego. The predictive layer forecasts next-day solar generation and SDG&E day-ahead prices; the prescriptive layer is an optimization in Julia that decides charging, holding, and selling actions to maximize revenue, with a robust formulation to handle price uncertainty. The pipeline demonstrates how ML and optimization can be cleanly chained together end-to-end.",
+    "description": "MIT Sloan 15.095 project that combines predictive modeling and prescriptive optimization to operate a grid-scale solar-paired battery in San Diego. The predictive layer forecasts next-day solar generation and SDG&E day-ahead prices; the prescriptive layer is an optimization in Julia that decides charging, holding, and selling actions to maximize revenue, with both ellipsoidal and budgeted robust formulations to handle price uncertainty. The pipeline demonstrates how ML and optimization can be cleanly chained together end-to-end.",
     "report": "reports/machinelearning (1).pdf",
     "featured": true
   },
   {
     "id": "bphc-shelter",
     "title": "Boston Public Health Commission · Shelter Occupancy Forecasting",
-    "subtitle": "MIT Sloan · Analytics Lab · ML Project Lead",
-    "image": "images/projects/forecasting.svg",
-    "categories": ["Machine Learning", "Forecasting", "Public Sector"],
-    "tools": ["Python", "scikit-learn", "Random Forest", "Gradient Boosting", "ARIMA", "Streamlit"],
+    "subtitle": "MIT Sloan · Analytics Lab · ML Project Lead · Fall 2025",
+    "image": "images/projects/bphc-shelter.svg",
+    "categories": ["Machine Learning"],
+    "tools": ["Python", "scikit-learn", "Random Forest", "Gradient Boosting", "ARIMA", "LASSO", "Streamlit"],
     "highlights": [
-      "Deployed Random Forest, Gradient Boosting, and ARIMA models to forecast 14-day homeless shelter occupancy",
-      "Integrated outputs in a Streamlit application, improving capacity planning accuracy by 50%",
-      "Identified key social, environmental, and temporal drivers of shelter utilization through feature engineering and interpretability analysis",
+      "Developed 14-day forecasts of daily bed demand for the BPHC's two main shelters: 112 Southampton (men's) and Woods Mullen (women's), spanning 2015–2025 of historical data",
+      "Trained a multi-model stack — linear regression for interpretation, LASSO for balance, and ensemble methods (Random Forest, Gradient Boosting, ARIMA) for performance — and engineered lagged T-14 → T relationships so forecasts can be made without future inputs",
+      "Engineered features across weather, COVID-era policy regimes (stay-at-home orders, CHNV, Ordinance 1373, CARE housing), and macro housing-market predictors informed by the homelessness literature",
+      "Generated pseudo-confidence intervals from cross-validation residuals because ensemble methods don't produce them natively, and ran sensitivity analysis with simulated missing data to stress-test robustness",
+      "Improved capacity-planning accuracy by 50% and integrated outputs into a Streamlit decision-support interface for BPHC operations staff",
       "Selected for poster presentation at the 2026 CSTE Annual Conference (Boston, MA), reaching 2,800+ public health professionals"
     ],
-    "description": "MIT Sloan Analytics Lab project with the Boston Public Health Commission. The team built and deployed a suite of machine-learning models — Random Forest, Gradient Boosting, and ARIMA — to forecast 14-day occupancy across the city's homeless shelter network, with results integrated into a Streamlit application for program managers. Feature-importance and interpretability analysis surfaced the social, environmental, and temporal factors driving demand, enabling better resource allocation. The work was selected for poster presentation at the 2026 CSTE Annual Conference.",
+    "description": "MIT Sloan Analytics Lab project with the Boston Public Health Commission. The team built and deployed a suite of machine-learning models — linear, LASSO, Random Forest, Gradient Boosting, and ARIMA — to forecast 14-day occupancy across the city's homeless shelter network, with results integrated into a Streamlit decision-support application for program managers. Feature-importance and interpretability analysis surfaced the social, environmental, and temporal factors driving demand, enabling better resource allocation.",
     "report": "reports/Final- BPHC_ALab Report_3.pdf",
     "featured": true
   },
   {
     "id": "boston-viz",
     "title": "Greater Boston · Data Visualization Proof of Concept",
-    "subtitle": "MIT · Data Visualization team project",
-    "image": "images/projects/data-visualization.svg",
-    "categories": ["Data Visualization"],
+    "subtitle": "MIT MBAn · Data Visualization team project",
+    "image": "images/projects/boston-viz.svg",
+    "categories": ["Geospatial"],
     "tools": ["JavaScript", "D3", "GeoJSON", "Web"],
     "highlights": [
-      "Interactive proof-of-concept visualization of Greater Boston",
-      "Live deployment hosted on GitHub Pages",
-      "Collaborative MIT team project focused on cartographic and chart design"
+      "Interactive proof-of-concept visualization of Greater Boston combining geospatial layers with chart-driven detail panels",
+      "Explores how careful chart design and cartographic layering can make a complex regional dataset legible and navigable",
+      "Live deployment hosted on GitHub Pages — view the live site for the full experience",
+      "Collaborative MIT MBAn data-visualization team project"
     ],
-    "description": "Collaborative MIT data-visualization project exploring Greater Boston through an interactive proof-of-concept. The project showcases how careful chart design and geospatial layering can make a complex regional dataset legible and explorable. View the live site for the full experience.",
+    "description": "Collaborative MIT data-visualization project exploring Greater Boston through an interactive proof-of-concept that combines geospatial layers with chart-driven detail panels. The project showcases how careful chart design and cartographic layering can make a complex regional dataset legible and explorable.",
     "live": "https://hiromitsdm.github.io/MIT_FP2-Proof-of-Concept_Greater-Boston-Viz/",
     "featured": true
   },
@@ -86,74 +95,84 @@
     "id": "trading-strategies",
     "title": "Mean Reversion + Momentum Trading Strategies",
     "subtitle": "MIT Sloan · 15.C51 Proprietary Trading · Spring 2026",
-    "image": "images/projects/forecasting.svg",
-    "categories": ["Machine Learning", "Forecasting", "Finance"],
-    "tools": ["Python", "scikit-learn", "Walk-Forward Validation", "Feature Selection"],
+    "image": "images/projects/trading-strategies.svg",
+    "categories": ["Machine Learning"],
+    "tools": ["Python", "scikit-learn", "Walk-Forward Validation", "Information Coefficient", "Feature Selection"],
     "highlights": [
-      "Developed and backtested mean-reversion and momentum ML strategies on 29 DJIA constituents over 2015–2026",
-      "Trained 120 models across six model types, two strategies, and five holding periods using purged walk-forward validation with 180-day embargo windows",
+      "Developed and backtested two opposing ML-driven trading strategies — mean reversion and momentum — on 29 DJIA constituents over 2015–2026",
+      "Engineered features from technical indicators, cross-sectional return ranks, sector momentum, and calendar signals, then filtered them by Information Coefficient and pairwise redundancy pruning",
+      "Trained 120 models across six model families, two strategies, and five holding periods (1, 5, 21, 63, 126 days)",
+      "Used purged walk-forward validation with 180-day embargo windows throughout to prevent data leakage from the test set into training",
       "5-day mean-reversion model achieved a Sharpe ratio of 1.34 and CAGR of 19.9% on the test set",
-      "63-day momentum model produced consistent positive risk-adjusted returns (Sharpe 1.73 / 0.70 / 3.50 across validation, test, and embargo)"
+      "63-day momentum model produced consistent positive risk-adjusted returns across validation, test, and embargo periods (Sharpe 1.73 / 0.70 / 3.50)",
+      "Identified realized short-term volatility as the most predictive feature across both strategies, and recommended a volatility-conditioned allocation that combines both strategies rather than running either in isolation"
     ],
-    "description": "MIT Sloan 15.C51 Proprietary Trading project that builds and rigorously backtests two opposing strategies — mean reversion and momentum — on DJIA constituents, with strict purged walk-forward validation and embargo windows to prevent leakage. The two strategies turn out to be regime-complementary, motivating a volatility-conditioned allocation rather than either approach in isolation.",
+    "description": "MIT Sloan 15.C51 Proprietary Trading project that builds and rigorously backtests two opposing strategies — mean reversion and momentum — on DJIA constituents, with strict purged walk-forward validation and 180-day embargo windows to prevent leakage. The two strategies turn out to be regime-complementary, motivating a volatility-conditioned allocation rather than either approach in isolation.",
     "report": "reports/15_C51_Project_1___Trading (2).pdf"
   },
   {
     "id": "f1-emissions",
     "title": "Optimization · F1 Race Calendar Redesign",
     "subtitle": "UC Berkeley · IEOR 162 · Nonlinear & Discrete Optimization",
-    "image": "images/projects/optimization.svg",
-    "categories": ["Optimization", "Sustainability"],
-    "tools": ["AMPL", "Mixed-Integer Optimization", "Routing"],
+    "image": "images/projects/f1-emissions.svg",
+    "categories": ["Optimization", "Geospatial"],
+    "tools": ["AMPL", "Python", "R", "Mixed-Integer Optimization", "Routing"],
     "highlights": [
-      "Modeled the Formula 1 calendar as a routing / sequencing optimization in AMPL",
-      "Re-sequenced races to minimize travel distance while maintaining venue and weather constraints",
-      "Cut average emissions by an estimated 927 tons of carbon dioxide per team"
+      "Modeled the 2024 Formula 1 calendar as a constrained TSP / sequencing optimization in AMPL, with binary x_{i,j} variables over all 22 race cities (484 city pairs)",
+      "Computed Haversine distances between every city pair using a custom R + geosphere preprocessing pipeline that parsed JSON race data into a distance matrix",
+      "Compared three approaches: a nearest-neighbor heuristic, a pure minimum-distance LP, and an LP with FIA contract / weather / venue constraints",
+      "Original 2024 calendar: 74,713.65 miles; nearest-neighbor: 34,689.94 mi (≈1,066 t CO₂ saved per team); pure minimum-distance LP: 30,090.94 mi (≈1,189 t CO₂); constrained LP: 39,910.02 mi (≈927 t CO₂ saved while still respecting real-world constraints)",
+      "Connects directly to the FIA's net-zero-by-2030 commitment, since logistics accounted for 45% of F1's 2019 carbon footprint"
     ],
-    "description": "UC Berkeley IEOR 162 Nonlinear & Discrete Optimization project that re-imagines the Formula 1 calendar as a constrained routing problem. The AMPL model finds a re-ordering of races that minimizes global travel distance while respecting venue, weather, and contractual constraints, reducing average emissions by an estimated 927 tons of CO₂ per team.",
+    "description": "UC Berkeley IEOR 162 project that re-imagines the 2024 Formula 1 calendar as a constrained routing problem. The AMPL model finds a re-ordering of races that minimizes global travel distance while respecting venue, weather, and contractual constraints, reducing average emissions by an estimated 927 tons of CO₂ per team — connecting directly to the FIA's net-zero-by-2030 commitment.",
     "report": "reports/IEOR 162 Project-FINAL.pdf"
   },
   {
     "id": "yelp-deep-learning",
     "title": "Yelp Sentiment & Star Rating Prediction",
-    "subtitle": "MIT Sloan · Deep Learning",
-    "image": "images/projects/nlp.svg",
-    "categories": ["NLP", "Machine Learning"],
-    "tools": ["Python", "PyTorch", "BERT", "GloVe", "Bag-of-Words"],
+    "subtitle": "MIT Sloan · Deep Learning · Fall 2025",
+    "image": "images/projects/yelp-deep-learning.svg",
+    "categories": ["Machine Learning"],
+    "tools": ["Python", "PyTorch", "Keras", "BERT", "GloVe", "CountVectorizer"],
     "highlights": [
-      "Predicted Yelp star ratings directly from review text using neural networks",
-      "Compared bag-of-words, GloVe word embeddings, and BERT contextual embeddings across multiple training sizes",
-      "Studied tradeoffs between model sophistication, data efficiency, and deployment simplicity"
+      "Cast Yelp star-rating prediction as a regression problem from raw review text and trained neural networks at three levels of representation: bag-of-words counts, pretrained GloVe embeddings, and a frozen BERT backbone with a regression head",
+      "Built two working datasets (1,000 and 26,318 reviews) with reproducible 80/20 train-test and 90/10 train-val splits to enable apples-to-apples comparison across representations and dataset sizes",
+      "Best test performance came from the bag-of-words baseline on the full 26k dataset (MSE 0.58 / MAE 0.60), outperforming GloVe (MSE 0.89) and BERT-on-2.5k (MSE 0.89)",
+      "Studied data-efficiency tradeoffs: BoW continued to benefit from additional data while GloVe plateaued near MSE 0.9 and BERT was compute-bound at small subsamples",
+      "Built supplementary CV models on review-attached images to classify scenes (food, drink, etc.) and explore image-driven proxies for business performance"
     ],
-    "description": "MIT Sloan Deep Learning project on the Yelp Open Dataset. The work compares three levels of text representation — one-hot bag-of-words, pretrained GloVe embeddings, and a pretrained BERT transformer — and trains neural networks at each level to predict star ratings directly from review text, evaluating performance as a function of representation and training-set size.",
+    "description": "MIT Sloan Deep Learning project on the Yelp Open Dataset. The work compares three levels of text representation — one-hot bag-of-words, pretrained GloVe embeddings, and a pretrained BERT transformer — and trains neural networks at each level to predict star ratings directly from review text, evaluating performance as a function of representation and training-set size. A supplementary CV pipeline explores Yelp review images.",
     "report": "reports/DL_Writeup.pdf"
   },
   {
     "id": "mongo-vs-sql",
-    "title": "MongoDB vs SQL · Yelp Query Analysis",
+    "title": "MongoDB vs SQL · Yelp Query Benchmarking",
     "subtitle": "UC Berkeley · Data 101 Final Project",
-    "image": "images/projects/data-engineering.svg",
+    "image": "images/projects/mongo-vs-sql.svg",
     "categories": ["Data Engineering"],
-    "tools": ["MongoDB", "PostgreSQL", "Python", "Benchmarking"],
+    "tools": ["PostgreSQL", "MongoDB", "Python", "psycopg2", "EXPLAIN ANALYZE"],
     "highlights": [
-      "Sampled the Yelp Academic Dataset (~50k users, ~50k businesses, ~1M reviews) into PostgreSQL and MongoDB",
-      "Authored equivalent analytical queries in both systems and benchmarked across speed, scalability, and ergonomics",
-      "Wrote up recommendations for when to choose each store"
+      "Sampled the Yelp Academic Dataset down to ~50k users, ~50k businesses, and ~1M reviews to fit local PostgreSQL 14 and MongoDB instances",
+      "Authored matched analytical queries in both engines — top businesses by state, top reviewers, multi-step aggregations — and benchmarked them with EXPLAIN ANALYZE and MongoDB's own explain plans",
+      "Largest gap: Top-Businesses-By-State ran in 354 ms on PostgreSQL versus 46,279 ms on MongoDB, driven by Postgres window functions vs. a MongoDB COLLSCAN over 150,346 documents and a complex $group / $unwind pipeline",
+      "Quantified the impact of indexing: indexing on businesses.review_count and businesses.stars cut PostgreSQL to ~300 ms and MongoDB to ~10,000 ms",
+      "Concluded with a decision rubric: PostgreSQL for structured, query-intensive analytical workloads; MongoDB for unstructured, dynamic, write-heavy data"
     ],
-    "description": "Data-engineering final project that puts MongoDB and PostgreSQL head-to-head on the Yelp dataset. After loading equivalent samples into both systems, the team authored matched analytical queries and benchmarked them across speed, scalability, and ease of expression, informing when each technology is the right tool.",
+    "description": "Data-engineering final project that puts MongoDB and PostgreSQL head-to-head on the Yelp dataset. After loading equivalent samples into both systems, the team authored matched analytical queries and benchmarked them with EXPLAIN ANALYZE, with and without indexing, to inform when each technology is the right tool.",
     "report": "reports/D101 Final Project.pdf"
   },
   {
     "id": "voltage-discharge",
     "title": "Voltage Discharge Prediction · Hydrogen Electrolyzers",
-    "subtitle": "Verdagy · Data Science Intern",
-    "image": "images/projects/machine-learning.svg",
-    "categories": ["Machine Learning", "Energy"],
-    "tools": ["Python", "Seeq", "Time-Series", "Sensor Data"],
+    "subtitle": "Verdagy · Data Science Intern · Summer 2024",
+    "image": "images/projects/voltage-discharge.svg",
+    "categories": ["Machine Learning"],
+    "tools": ["Python", "Seeq", "Pandas", "Time-Series", "Sensor Data"],
     "highlights": [
-      "Automated Python algorithms to clean real-time raw sensor data, removing noise, outliers, and sensor malfunctions",
-      "Reduced data cleaning labor by 80% and improved summary-statistic accuracy",
-      "Designed and rolled out 9 dashboards in Python and Seeq to track voltage drift and hydrogen production for 10 lab-scale electrolyzers"
+      "Automated Python algorithms to ingest real-time raw sensor streams from 10 lab-scale alkaline electrolyzers, removing noise, outliers, and detected sensor malfunctions",
+      "Reduced data-cleaning labor by 80% and improved the accuracy of downstream summary statistics that fed scientist-facing dashboards",
+      "Designed and rolled out 9 dashboards in Python and Seeq to track voltage drift and hydrogen production in real time",
+      "Enabled faster R&D decision-making for the engineering and executive teams by surfacing degradation patterns under simulated renewable-energy intermittency"
     ],
     "description": "Industry research at Verdagy on alkaline electrolyzer performance. Built Python pipelines to ingest, denoise, and align multivariate sensor streams from 10 lab-scale electrolyzers, then designed nine dashboards in Python and Seeq for real-time monitoring of voltage drift and hydrogen production — enabling faster R&D decision-making for scientists and executives.",
     "noReport": true
@@ -162,13 +181,14 @@
     "id": "marketing-kaggle",
     "title": "Product Analytics · Marketing Kaggle Competition",
     "subtitle": "MIT Sloan · Product Analytics · Top 10 leaderboard finish",
-    "image": "images/projects/product-analytics.svg",
-    "categories": ["Product Analytics", "Machine Learning"],
+    "image": "images/projects/marketing-kaggle.svg",
+    "categories": ["Machine Learning"],
     "tools": ["Python", "scikit-learn", "Feature Engineering", "Gradient Boosting"],
     "highlights": [
       "Top-10 leaderboard finish in a class-wide marketing-analytics Kaggle competition",
-      "Heavy feature engineering and ensembling on customer-behavior data",
-      "Demonstrates practical product-analytics modeling end-to-end"
+      "Heavy feature engineering on customer-behavior data — recency / frequency / monetary aggregates, interaction terms, and tenure features",
+      "Ensembled multiple gradient-boosted models with cross-validated weights to stabilize the leaderboard score",
+      "Demonstrates practical product-analytics modeling end-to-end, from raw transactional data to a deployable scoring function"
     ],
     "description": "Kaggle-style marketing analytics competition where my team placed in the top 10 on the leaderboard. The project involved heavy feature engineering on customer-behavior data and ensembling of gradient-boosted models, included here as evidence of practical product-analytics work.",
     "noReport": true
@@ -177,13 +197,14 @@
     "id": "espm-arcgis",
     "title": "ArcGIS Mapping · ESPM 110",
     "subtitle": "UC Berkeley · Environmental health spatial analyses",
-    "image": "images/projects/gis.svg",
-    "categories": ["GIS"],
-    "tools": ["ArcGIS Pro", "Spatial Analysis", "Cartography"],
+    "image": "images/projects/espm-arcgis.svg",
+    "categories": ["Geospatial"],
+    "tools": ["ArcGIS Pro", "DEM", "Spatial Analysis", "Cartography"],
     "highlights": [
-      "Produced map deliverables for UC Berkeley's ESPM 110",
-      "Layered ecological and demographic data for environmental analysis",
-      "Practiced classical cartographic design for technical reports"
+      "Produced map deliverables for UC Berkeley's ESPM 110 (The Politics & Ecology of Environmental Health)",
+      "Worked through full GIS workflows — DEM-based hydrologic flow direction around Strawberry Creek, fire-risk overlays of the Berkeley Hills combining slope, road networks, and land-management classifications",
+      "Practiced classical cartographic design: legend hierarchy, color-by-class, annotations, and scale bars sized for technical-report inclusion",
+      "Final maps are featured on the dedicated Maps page of this site"
     ],
     "description": "Selected map outputs from coursework in UC Berkeley's ESPM 110 (The Politics & Ecology of Environmental Health). The full reports are coursework, but the map deliverables — included on the dedicated Maps page — showcase hands-on ArcGIS work: data layering, spatial joins, classification, and cartographic design.",
     "noReport": true
