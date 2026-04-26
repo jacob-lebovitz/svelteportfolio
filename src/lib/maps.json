@@ -3,12 +3,14 @@
     "id": "berkeley-flow-direction",
     "title": "UC Berkeley · Flow Direction Around Strawberry Creek",
     "caption": "Hydrologic flow-direction analysis around Strawberry Creek using a 10-foot UC Berkeley DEM. Layers include predicted flow accumulation and a directional raster classified across the eight cardinal flow values. ESPM C110, October 2023.",
-    "file": "maps/Lebovitz_Jacob_Lab05ESPM110 copy.pdf"
+    "file": "maps/Lebovitz_Jacob_Lab05ESPM110 copy.pdf",
+    "image": "images/maps/map-tile.svg"
   },
   {
     "id": "berkeley-fire-risk",
     "title": "Fire Risk in the Berkeley Area",
     "caption": "Fire-risk overlay for the Berkeley area combining road networks, slopes greater than 20%, and federal/state/local/other land-management classifications, with high-risk federal land highlighted. ESPM C110, November 2023.",
-    "file": "maps/Lebovitz_Jacob_ESPM110_Lab07 copy.pdf"
+    "file": "maps/Lebovitz_Jacob_ESPM110_Lab07 copy.pdf",
+    "image": "images/maps/map-tile.svg"
   }
 ]

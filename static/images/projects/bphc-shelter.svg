@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="BPHC · Shelter Occupancy Forecasting">
+  <rect width="800" height="500" fill="#0f172a"/>
+  <g stroke="#94a3b8" stroke-width="1.25" fill="none" opacity="0.18">
+    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800"/>
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500"/>
+  </g>
+  <line x1="80" y1="350" x2="720" y2="350" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="80" y1="100" x2="80" y2="350" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M80 280 L140 260 L200 270 L260 230 L320 245 L380 215 L440 230 L500 200"
+        fill="none" stroke="#e2e8f0" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M500 100 L500 350" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 6"/>
+  <path d="M500 200 L560 220 L620 180 L680 200 L720 175"
+        fill="none" stroke="#e2e8f0" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 6"/>
+  <path d="M500 200 L560 200 L620 150 L680 175 L720 145
+           L720 205 L680 225 L620 210 L560 240 L500 200 Z"
+        fill="#e2e8f0" opacity="0.18" stroke="none"/>
+  <text x="510" y="125" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="13" font-weight="600" letter-spacing="2" fill="#94a3b8">FORECAST</text>
+  <text x="350" y="125" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="13" font-weight="600" letter-spacing="2" fill="#94a3b8" text-anchor="middle">HISTORY</text>
+  <text x="60" y="450" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="600" letter-spacing="3" fill="#94a3b8">14-DAY OCCUPANCY FORECAST</text>
+</svg>

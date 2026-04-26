@@ -49,7 +49,6 @@
     </p>
     <div class="cta-row">
       <a class="cta primary" href="{base}/projects">View projects</a>
-      <a class="cta" href="{base}/resume">Resume</a>
       <a class="cta" href="{base}/contact">Contact</a>
     </div>
   </div>
@@ -82,7 +81,7 @@
     <h2>Featured projects</h2>
     <a class="see-all" href="{base}/projects">See all projects →</a>
   </div>
-  <div class="projects featured-grid">
+  <div class="featured-list">
     {#each featured.slice(0, 3) as p}
       <Project data={p} />
     {/each}
@@ -237,8 +236,11 @@
     color: var(--ink);
   }
 
-  .featured-grid {
+  .featured-list {
     margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
   }
 
   .reading-section {

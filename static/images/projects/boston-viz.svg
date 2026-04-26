@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Greater Boston Data Visualization">
+  <rect width="800" height="500" fill="#0f172a"/>
+  <g stroke="#94a3b8" stroke-width="1.25" fill="none" opacity="0.18">
+    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800"/>
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500"/>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="2" fill="none" stroke-linejoin="round">
+    <path d="M180 130 L240 110 L320 120 L380 100 L440 130 L500 115 L560 140 L600 165 L630 220 L640 270 L600 320 L530 340 L450 330 L380 350 L300 340 L240 320 L200 280 L180 220 Z"/>
+  </g>
+  <g fill="none" stroke="#94a3b8" stroke-width="1" opacity="0.55">
+    <path d="M200 160 H 600"/>
+    <path d="M200 200 H 620"/>
+    <path d="M210 240 H 620"/>
+    <path d="M220 280 H 600"/>
+    <path d="M250 320 H 580"/>
+  </g>
+  <g fill="#e2e8f0">
+    <circle cx="280" cy="200" r="6"/>
+    <circle cx="380" cy="180" r="9"/>
+    <circle cx="460" cy="240" r="5"/>
+    <circle cx="540" cy="200" r="7"/>
+    <circle cx="320" cy="280" r="5"/>
+    <circle cx="500" cy="290" r="4"/>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="1.5" fill="none" opacity="0.7">
+    <path d="M280 200 C 320 220, 360 200, 380 180"/>
+    <path d="M380 180 C 420 220, 440 240, 460 240"/>
+    <path d="M460 240 C 500 230, 520 215, 540 200"/>
+  </g>
+  <text x="60" y="450" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="600" letter-spacing="3" fill="#94a3b8">GREATER BOSTON</text>
+</svg>

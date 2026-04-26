@@ -3,9 +3,18 @@
   export let data = {};
 </script>
 
-<article class="project-card">
+<article class="project-row">
   {#if data.image}
-    <img class="project-img" src={asset(data.image)} alt="" loading="lazy" />
+    <a
+      class="project-thumb"
+      href={data.report && !data.noReport ? asset(data.report) : data.live ?? null}
+      target={data.report || data.live ? "_blank" : null}
+      rel={data.report || data.live ? "noopener noreferrer" : null}
+      tabindex={data.report || data.live ? 0 : -1}
+      aria-label={data.report || data.live ? `Open ${data.title}` : data.title}
+    >
+      <img src={asset(data.image)} alt="" loading="lazy" />
+    </a>
   {/if}
 
   <div class="project-body">
@@ -58,47 +67,55 @@
 </article>
 
 <style>
-  .project-card {
-    display: flex;
-    flex-direction: column;
+  .project-row {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr);
+    gap: 1.5rem;
+    align-items: stretch;
     border: 1px solid var(--rule);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     background-color: var(--paper);
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
-  .project-card:hover {
+  .project-row:hover {
     border-color: var(--rule-strong);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
   }
 
-  .project-img {
+  .project-thumb {
+    display: block;
+    background-color: var(--surface-2);
+    border-right: 1px solid var(--rule);
+    overflow: hidden;
+  }
+  .project-thumb img {
     width: 100%;
+    height: 100%;
     aspect-ratio: 8 / 5;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid var(--rule);
   }
 
   .project-body {
-    padding: 1rem 1.1rem 1.1rem;
+    padding: 1.25rem 1.5rem 1.4rem 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
-    flex: 1;
+    gap: 0.6rem;
+    min-width: 0;
   }
 
   h2 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.3;
     font-weight: 600;
   }
 
   .subtitle {
-    margin: 0.2rem 0 0;
+    margin: 0.25rem 0 0;
     color: var(--muted);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .tags {
@@ -113,7 +130,7 @@
     font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.01em;
-    padding: 0.18em 0.55em;
+    padding: 0.2em 0.6em;
     border-radius: 999px;
     background-color: var(--surface-2);
     color: var(--ink-soft);
@@ -121,16 +138,16 @@
   }
 
   .highlights {
-    margin: 0;
-    padding-left: 1.1rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    margin: 0.2rem 0 0;
+    padding-left: 1.15rem;
+    font-size: 0.93rem;
+    line-height: 1.55;
     color: var(--ink-soft);
   }
-  .highlights li { margin-bottom: 0.2rem; }
+  .highlights li { margin-bottom: 0.3rem; }
 
   .desc {
-    font-size: 0.92rem;
+    font-size: 0.93rem;
     line-height: 1.55;
     margin: 0;
     color: var(--ink-soft);
@@ -140,8 +157,8 @@
     margin-top: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-    padding-top: 0.4rem;
+    gap: 0.5rem 1.1rem;
+    padding-top: 0.5rem;
     align-items: center;
   }
 
@@ -149,7 +166,7 @@
     color: var(--ink);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     border-bottom: 1px solid var(--rule-strong);
     padding-bottom: 1px;
   }
@@ -165,5 +182,18 @@
     background-color: var(--surface-2);
     color: var(--ink-soft);
     border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 720px) {
+    .project-row {
+      grid-template-columns: 1fr;
+    }
+    .project-thumb {
+      border-right: none;
+      border-bottom: 1px solid var(--rule);
+    }
+    .project-body {
+      padding: 1rem 1.25rem 1.25rem;
+    }
   }
 </style>

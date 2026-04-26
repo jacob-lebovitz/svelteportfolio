@@ -7,7 +7,6 @@
     { url: "/projects", title: "Projects" },
     { url: "/maps", title: "Maps" },
     { url: "/writing", title: "Writing" },
-    { url: "/resume", title: "Resume" },
     { url: "/contact", title: "Contact" },
     { url: "https://github.com/jacob-lebovitz", title: "GitHub" },
   ];

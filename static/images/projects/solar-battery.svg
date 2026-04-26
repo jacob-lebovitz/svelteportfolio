@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Predictive + Prescriptive Solar Battery">
+  <rect width="800" height="500" fill="#0f172a"/>
+  <g stroke="#94a3b8" stroke-width="1.25" fill="none" opacity="0.18">
+    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800"/>
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500"/>
+  </g>
+  <line x1="80" y1="320" x2="720" y2="320" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M80 320 C 160 320, 220 130, 320 130 S 460 320, 540 320"
+        fill="none" stroke="#e2e8f0" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M540 320 L600 220 L660 270 L720 200"
+        fill="none" stroke="#e2e8f0" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 6"/>
+  <g fill="none" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <path d="M80 380 L160 360 L240 340 L320 360 L400 380 L480 340 L560 320 L640 280 L720 240"/>
+  </g>
+  <g fill="#e2e8f0">
+    <rect x="350" y="370" width="60" height="60" rx="6"/>
+    <rect x="362" y="362" width="36" height="10" rx="2"/>
+  </g>
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+    <line x1="350" y1="385" x2="395" y2="385"/>
+    <line x1="350" y1="400" x2="395" y2="400"/>
+    <line x1="350" y1="415" x2="395" y2="415"/>
+  </g>
+  <text x="60" y="450" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="600" letter-spacing="3" fill="#94a3b8">SOLAR + STORAGE DISPATCH</text>
+</svg>

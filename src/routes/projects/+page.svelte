@@ -2,9 +2,14 @@
   import projects from "$lib/projects.json";
   import Project from "$lib/Project.svelte";
 
-  const allCategories = Array.from(
-    new Set(projects.flatMap((p) => p.categories ?? []))
-  ).sort();
+  // Only these four filter buckets are exposed to visitors. Every project
+  // declares one or more of these tags in its `categories` array.
+  const FILTERS = [
+    "Machine Learning",
+    "Optimization",
+    "Data Engineering",
+    "Geospatial",
+  ];
 
   let activeCategory = "All";
   $: filtered =
@@ -21,9 +26,9 @@
   <p class="eyebrow">Portfolio</p>
   <h1>Projects</h1>
   <p class="lede">
-    Selected work spanning machine learning, optimization, forecasting, data engineering,
-    and analytics. Most projects link to a written report; a few are confidential or
-    summarized at a high level on purpose.
+    Selected work spanning machine learning, optimization, data engineering, and
+    geospatial analysis. Most projects link to a written report; a few are confidential
+    or summarized at a high level on purpose.
   </p>
 </header>
 
@@ -36,7 +41,7 @@
   >
     All <span class="count">{projects.length}</span>
   </button>
-  {#each allCategories as c}
+  {#each FILTERS as c}
     <button
       role="tab"
       class:active={activeCategory === c}
@@ -51,7 +56,7 @@
   {/each}
 </div>
 
-<div class="projects detailed-grid">
+<div class="projects-list">
   {#each filtered as p (p.id)}
     <Project data={p} />
   {/each}
@@ -116,8 +121,9 @@
     opacity: 0.65;
   }
 
-  .detailed-grid {
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  .projects-list {
+    display: flex;
+    flex-direction: column;
     gap: 1.25rem;
   }
 </style>
