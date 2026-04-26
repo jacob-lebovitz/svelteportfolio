@@ -1,11 +1,42 @@
 :root {
-  --color-accent: oklch(58% 0.19 264);
-  --bg-grad-1: oklch(20% 0.04 280);
-  --bg-grad-2: oklch(15% 0.03 240);
+  color-scheme: light dark;
+
+  --paper: #ffffff;
+  --surface: #fafafa;
+  --surface-2: #f3f4f6;
+  --ink: #111418;
+  --ink-soft: #2c3138;
+  --muted: #5b6470;
+  --rule: #e3e6ea;
+  --rule-strong: #c9cfd6;
+  --accent: #1f2937;
+
+  --color-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1115;
+    --surface: #14171c;
+    --surface-2: #1b1f25;
+    --ink: #f4f6f8;
+    --ink-soft: #d8dde3;
+    --muted: #9aa3ad;
+    --rule: #262a31;
+    --rule-strong: #3a4049;
+    --accent: #d4dae2;
+
+    --color-accent: var(--accent);
+  }
 }
 
 html {
-  accent-color: var(--color-accent);
+  accent-color: var(--accent);
+}
+
+html, body {
+  background-color: var(--paper);
+  color: var(--ink);
 }
 
 body {
@@ -13,15 +44,7 @@ body {
     "Helvetica Neue", Arial, sans-serif;
   max-width: 1100px;
   margin-inline: auto;
-  padding: 1rem 1.25rem 2rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background:
-      radial-gradient(ellipse at top left, color-mix(in oklch, var(--color-accent), transparent 88%), transparent 60%),
-      radial-gradient(ellipse at bottom right, color-mix(in oklch, #4facfe, transparent 88%), transparent 60%);
-  }
+  padding: 1rem 1.5rem 2rem;
 }
 
 img {
@@ -37,7 +60,7 @@ select {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--ink);
 }
 
 form {
@@ -53,19 +76,34 @@ form label {
   grid-column: 1 / -1;
 }
 
+form input,
+form textarea {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.5em 0.7em;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--rule-strong);
+}
+
 form button {
   grid-column: 1 / -1;
   padding: 0.6em 1em;
   font: inherit;
-  border-radius: 8px;
-  border: 1px solid color-mix(in oklch, var(--color-accent), transparent 50%);
-  background-color: var(--color-accent);
-  color: white;
+  border-radius: 6px;
+  border: 1px solid var(--ink);
+  background-color: var(--ink);
+  color: var(--paper);
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
 }
 form button:hover {
-  filter: brightness(1.05);
+  background-color: var(--ink-soft);
+  border-color: var(--ink-soft);
 }
 
 .projects {
@@ -77,6 +115,12 @@ form button:hover {
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: -0.005em;
 }
 
 h1, h2, h3, h4, h5, h6 {

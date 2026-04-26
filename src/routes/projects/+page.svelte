@@ -21,9 +21,9 @@
   <p class="eyebrow">Portfolio</p>
   <h1>Projects</h1>
   <p class="lede">
-    A selection of work spanning machine learning, optimization, data engineering, and
-    analytics. Most projects link to a written report; a few are confidential or held back
-    on purpose and are summarized at a high level.
+    Selected work spanning machine learning, optimization, forecasting, data engineering,
+    and analytics. Most projects link to a written report; a few are confidential or
+    summarized at a high level on purpose.
   </p>
 </header>
 
@@ -62,15 +62,15 @@
     margin: 1.5rem 0 2rem;
   }
   .page-head h1 {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
     margin: 0.2rem 0 0.5rem;
   }
   .eyebrow {
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--muted);
     margin: 0;
   }
   .lede {
@@ -84,33 +84,36 @@
     flex-wrap: wrap;
     gap: 0.4rem 0.5rem;
     margin-bottom: 1.6rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
   }
   .filters button {
     padding: 0.35em 0.85em;
-    border-radius: 999px;
-    border: 1px solid color-mix(in oklch, var(--color-accent), transparent 70%);
-    background: transparent;
-    color: inherit;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    color: var(--ink);
     cursor: pointer;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     transition: background-color 0.15s ease, border-color 0.15s ease;
   }
   .filters button:hover {
-    background-color: color-mix(in oklch, var(--color-accent), canvas 88%);
+    background-color: var(--surface-2);
+    border-color: var(--rule-strong);
   }
   .filters button.active {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
-    color: white;
+    background-color: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
   }
   .filters .count {
     font-variant-numeric: tabular-nums;
     font-size: 0.75rem;
-    opacity: 0.75;
+    opacity: 0.65;
   }
 
   .detailed-grid {

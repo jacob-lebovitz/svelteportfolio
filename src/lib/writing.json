@@ -1,16 +1,16 @@
 [
   {
-    "id": "essay-1",
-    "title": "Essay: Add your first writing sample here",
-    "summary": "Drop your first essay PDF into static/writing/ and update src/lib/writing.json with its title, summary, and filename. This entry is a placeholder so the layout renders before files are added.",
-    "tags": ["Essay", "Writing"],
-    "file": "writing/essay-1.pdf"
+    "id": "leadership-paper",
+    "title": "The Neural Pathway to Success",
+    "summary": "Reflective essay from MIT Sloan's 15.318 Discovering Your Leadership Signature, using the metaphor of neural pathways to examine personal growth, intentionality, and how to evolve a leadership signature through repeated, deliberate practice.",
+    "tags": ["MIT Sloan", "Leadership", "Reflective"],
+    "file": "writing/Leadership Paper #2 (2).pdf"
   },
   {
-    "id": "essay-2",
-    "title": "Essay: Add your second writing sample here",
-    "summary": "Second placeholder entry. Edit src/lib/writing.json once your real essay PDFs are placed in static/writing/.",
-    "tags": ["Essay", "Writing"],
-    "file": "writing/essay-2.pdf"
+    "id": "data-analysis-essay",
+    "title": "Ethical Stakes of Data-Centered Research",
+    "summary": "UC Berkeley DATA C104 essay analyzing the social and ethical implications of using demographic data in workplace optimization, drawing on case studies like the COMPAS recidivism algorithm to argue for stronger institutional regulation of data-driven research.",
+    "tags": ["UC Berkeley", "Data Ethics", "Analytical"],
+    "file": "writing/Analysis Essay #2.pdf"
   }
 ]

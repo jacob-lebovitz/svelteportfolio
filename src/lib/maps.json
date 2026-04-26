@@ -1,14 +1,14 @@
 [
   {
-    "id": "map-1",
-    "title": "ESPM 110 · Map 1",
-    "caption": "Spatial analysis output from UC Berkeley's ESPM 110. Replace this entry once the actual map image is added to static/maps/.",
-    "image": "maps/map-1.png"
+    "id": "berkeley-flow-direction",
+    "title": "UC Berkeley · Flow Direction Around Strawberry Creek",
+    "caption": "Hydrologic flow-direction analysis around Strawberry Creek using a 10-foot UC Berkeley DEM. Layers include predicted flow accumulation and a directional raster classified across the eight cardinal flow values. ESPM C110, October 2023.",
+    "file": "maps/Lebovitz_Jacob_Lab05ESPM110 copy.pdf"
   },
   {
-    "id": "map-2",
-    "title": "ESPM 110 · Map 2",
-    "caption": "Second ArcGIS map deliverable. Update src/lib/maps.json with the real title and caption when the image is available.",
-    "image": "maps/map-2.png"
+    "id": "berkeley-fire-risk",
+    "title": "Fire Risk in the Berkeley Area",
+    "caption": "Fire-risk overlay for the Berkeley area combining road networks, slopes greater than 20%, and federal/state/local/other land-management classifications, with high-risk federal land highlighted. ESPM C110, November 2023.",
+    "file": "maps/Lebovitz_Jacob_ESPM110_Lab07 copy.pdf"
   }
 ]
