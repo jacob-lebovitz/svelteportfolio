@@ -1,32 +1,32 @@
 [
   {
-    "id": "conagra-charter",
-    "title": "Conagra Brands · Capstone Charter",
-    "subtitle": "Forecasting & analytics for a Fortune 500 CPG company",
-    "image": "images/opti.png",
-    "categories": ["Machine Learning", "Forecasting", "Industry Capstone"],
-    "tools": ["Python", "SQL", "Time-Series", "Forecasting"],
+    "id": "conagra",
+    "title": "Conagra Brands · Production Line Scheduling",
+    "subtitle": "MIT Sloan Capstone · Data Science Capstone Intern",
+    "image": "images/projects/conagra.svg",
+    "categories": ["Optimization", "Industry Capstone", "Forecasting"],
+    "tools": ["Databricks", "SAP", "Power BI", "Python", "Agentic AI"],
     "highlights": [
-      "Currently leading an MIT MBAn capstone project with Conagra Brands",
-      "Building forecasting and analytics tooling to support demand and product planning decisions",
-      "Translating ambiguous business questions into a reproducible data-science workflow"
+      "Building a production-line scheduling tool that helps plant managers minimize equipment downtime and changeover costs",
+      "Establishing a scalable blueprint for company-wide data standardization across Databricks, SAP, and Power BI",
+      "Integrating an agentic AI solution for responding to unexpected events, enabling real-time schedule adjustments"
     ],
-    "description": "Capstone team project with Conagra Brands as part of the MIT Master of Business Analytics program. The work is currently in progress — high-level focus is using machine learning and time-series methods to support forecasting and decision-making for a Fortune 500 consumer packaged goods company. Project deliverables and detailed materials are confidential under the program's industry charter, so I'm sharing only a high-level summary here.",
+    "description": "MIT Sloan Master of Business Analytics capstone with Conagra Brands as a Data Science Capstone Intern. The project builds an optimization-driven scheduling tool for production lines, paired with an agentic AI layer for real-time disruption response, and lays the groundwork for company-wide data standardization. Detailed materials are confidential under the program's industry charter, so this entry stays at a high level.",
     "status": "In progress",
     "featured": true,
     "noReport": true
   },
   {
     "id": "drc-water",
-    "title": "Optimization · Water Access in the Democratic Republic of Congo",
-    "subtitle": "Prescriptive optimization for high-impact well placement",
-    "image": "images/opti.png",
-    "categories": ["Optimization", "Social Impact", "MIT"],
+    "title": "Optimization · Water Access in the DRC",
+    "subtitle": "MIT Sloan · Optimization Methods",
+    "image": "images/projects/optimization.svg",
+    "categories": ["Optimization", "Social Impact"],
     "tools": ["Julia", "JuMP", "Mixed-Integer Optimization", "Geospatial Data"],
     "highlights": [
-      "Built scalable optimization pipelines in Julia / JuMP",
-      "Identified high-impact well locations across the DRC",
-      "Improved projected water access by 19%"
+      "Engineered scalable optimization pipelines in Julia / JuMP",
+      "Identified high-impact well locations across the Democratic Republic of Congo that maximize population reach and minimize travel distance",
+      "Improved projected access to water by 19%"
     ],
     "description": "MIT Sloan Optimization Methods project applying mixed-integer programming to humanitarian infrastructure planning. The model selects new well locations across the Democratic Republic of Congo to maximize population reached and minimize travel distance to clean water, subject to budget and geographic constraints. Pipelines were built to scale across very large candidate-site sets and to compare multiple policy scenarios.",
     "report": "reports/drc-water-access.pdf",
@@ -35,47 +35,47 @@
   {
     "id": "solar-battery",
     "title": "Predictive + Prescriptive Solar Battery Strategy",
-    "subtitle": "ML forecasts feeding an optimization model for grid-scale storage",
-    "image": "images/solar.png",
+    "subtitle": "MIT Sloan · Machine Learning",
+    "image": "images/projects/machine-learning.svg",
     "categories": ["Machine Learning", "Optimization", "Energy"],
     "tools": ["Julia", "Python", "Time-Series Forecasting", "Mixed-Integer Optimization"],
     "highlights": [
-      "Forecasted next-day solar generation and electricity market prices",
-      "Built a JuMP optimization that prescribes when to charge, hold, or sell",
-      "End-to-end predictive → prescriptive pipeline for Southern California"
+      "Designed an optimized schedule in Julia to prescribe battery charging, holding, and selling strategies",
+      "Forecasted next-day solar energy availability and electricity market prices",
+      "Increased projected profits by 20%"
     ],
-    "description": "MIT Sloan Machine Learning project that combines predictive modeling and prescriptive optimization to operate a grid-scale battery in Southern California. The predictive layer forecasts next-day solar generation and market clearing prices; the prescriptive layer is a JuMP optimization that decides charging, holding, and selling actions to maximize revenue subject to physical battery constraints. The full pipeline demonstrates how ML and optimization can be cleanly chained together.",
+    "description": "MIT Sloan Machine Learning project that combines predictive modeling and prescriptive optimization to operate a grid-scale battery. The predictive layer forecasts next-day solar generation and market prices; the prescriptive layer is an optimization in Julia that decides charging, holding, and selling actions to maximize revenue subject to physical battery constraints. The full pipeline demonstrates how ML and optimization can be cleanly chained together end-to-end.",
     "report": "reports/solar-battery.pdf",
     "featured": true
   },
   {
     "id": "bphc-shelter",
     "title": "Boston Public Health Commission · Shelter Occupancy Forecasting",
-    "subtitle": "ML models for capacity planning at city homeless shelters",
-    "image": "images/BPHC.png",
+    "subtitle": "MIT Sloan · Analytics Lab · ML Project Lead",
+    "image": "images/projects/forecasting.svg",
     "categories": ["Machine Learning", "Forecasting", "Public Sector"],
-    "tools": ["Python", "scikit-learn", "Random Forest", "Gradient Boosting", "ARIMA"],
+    "tools": ["Python", "scikit-learn", "Random Forest", "Gradient Boosting", "ARIMA", "Streamlit"],
     "highlights": [
-      "Forecasted 14-day shelter occupancy across Boston shelters",
-      "Improved capacity prediction accuracy by 50% vs. baseline",
-      "Identified key social, environmental, and temporal predictors of utilization",
-      "Presented interpretable insights to BPHC program managers and city partners"
+      "Deployed Random Forest, Gradient Boosting, and ARIMA models to forecast 14-day homeless shelter occupancy",
+      "Integrated outputs in a Streamlit application, improving capacity planning accuracy by 50%",
+      "Identified key social, environmental, and temporal drivers of shelter utilization through feature engineering and interpretability analysis",
+      "Selected for poster presentation at the 2026 CSTE Annual Conference (Boston, MA), reaching 2,800+ public health professionals"
     ],
-    "description": "MIT Sloan Analytics Lab project with the Boston Public Health Commission. The team built and deployed a suite of machine-learning models — including Random Forest, Gradient Boosting, and ARIMA — to forecast 14-day occupancy across the city's homeless shelter network. Feature-importance analysis surfaced the social, environmental, and temporal factors driving demand, giving BPHC actionable signal for capacity planning and overflow mitigation.",
+    "description": "MIT Sloan Analytics Lab project with the Boston Public Health Commission. The team built and deployed a suite of machine-learning models — Random Forest, Gradient Boosting, and ARIMA — to forecast 14-day occupancy across the city's homeless shelter network, with results integrated into a Streamlit application for program managers. Feature-importance and interpretability analysis surfaced the social, environmental, and temporal factors driving demand, enabling better resource allocation. The work was selected for poster presentation at the 2026 CSTE Annual Conference.",
     "report": "reports/bphc-shelter.pdf",
     "featured": true
   },
   {
     "id": "boston-viz",
-    "title": "Greater Boston Data Visualization · Proof of Concept",
-    "subtitle": "Interactive visual exploration of Greater Boston",
-    "image": "images/techmag.png",
-    "categories": ["Data Visualization", "MIT"],
-    "tools": ["D3.js", "JavaScript", "GeoJSON", "Web"],
+    "title": "Greater Boston · Data Visualization Proof of Concept",
+    "subtitle": "MIT · Data Visualization team project",
+    "image": "images/projects/data-visualization.svg",
+    "categories": ["Data Visualization"],
+    "tools": ["JavaScript", "D3", "GeoJSON", "Web"],
     "highlights": [
       "Interactive proof-of-concept visualization of Greater Boston",
       "Live deployment hosted on GitHub Pages",
-      "Collaborated as part of an MIT MBAn data-visualization team"
+      "Collaborative MIT team project focused on cartographic and chart design"
     ],
     "description": "Collaborative MIT data-visualization project exploring Greater Boston through an interactive proof-of-concept. The project showcases how careful chart design and geospatial layering can make a complex regional dataset legible and explorable. View the live site for the full experience.",
     "live": "https://hiromitsdm.github.io/MIT_FP2-Proof-of-Concept_Greater-Boston-Viz/",
@@ -84,36 +84,36 @@
   {
     "id": "f1-emissions",
     "title": "Optimization · F1 Race Calendar Redesign",
-    "subtitle": "Cutting Formula 1 logistics emissions with combinatorial optimization",
-    "image": "images/opti.png",
+    "subtitle": "UC Berkeley · Nonlinear & Discrete Optimization",
+    "image": "images/projects/optimization.svg",
     "categories": ["Optimization", "Sustainability"],
     "tools": ["AMPL", "Mixed-Integer Optimization", "Routing"],
     "highlights": [
-      "Modeled the Formula 1 calendar as a routing/sequencing optimization in AMPL",
-      "Re-sequenced races to minimize global travel distance under FIA constraints",
-      "Estimated a reduction of 927 tons of CO₂ per team"
+      "Modeled the Formula 1 calendar as a routing / sequencing optimization in AMPL",
+      "Re-sequenced races to minimize travel distance while maintaining venue requirements",
+      "Cut average emissions by an estimated 927 tons of carbon dioxide per team"
     ],
-    "description": "UC Berkeley Nonlinear & Discrete Optimization project that re-imagines the Formula 1 calendar as a constrained routing problem. The AMPL model finds a re-ordering of races that minimizes global travel distance while respecting FIA scheduling and seasonal constraints. The redesigned calendar is estimated to save roughly 927 tons of CO₂ per team per season."
+    "description": "UC Berkeley Nonlinear & Discrete Optimization project that re-imagines the Formula 1 calendar as a constrained routing problem. The AMPL model finds a re-ordering of races that minimizes global travel distance while respecting venue and seasonal requirements, reducing average emissions by an estimated 927 tons of CO₂ per team."
   },
   {
     "id": "voltage-discharge",
-    "title": "Voltage Discharge Prediction · Green Hydrogen Electrolyzers",
-    "subtitle": "Sensor-data ML for material performance under intermittent renewables",
-    "image": "images/solar.png",
-    "categories": ["Machine Learning", "Energy", "Industry"],
+    "title": "Voltage Discharge Prediction · Hydrogen Electrolyzers",
+    "subtitle": "Verdagy · Data Science Intern",
+    "image": "images/projects/machine-learning.svg",
+    "categories": ["Machine Learning", "Energy"],
     "tools": ["Python", "Seeq", "Time-Series", "Sensor Data"],
     "highlights": [
-      "Cleaned and modeled multivariate sensor data from 10 lab-scale electrolyzers",
-      "Predicted voltage discharge curves under intermittent renewable input",
-      "Reduced data cleaning labor by 80% through automated noise/outlier handling"
+      "Automated Python algorithms to clean real-time raw sensor data, removing noise, outliers, and sensor malfunctions",
+      "Reduced data cleaning labor by 80% and improved summary-statistic accuracy",
+      "Designed and rolled out 9 dashboards in Python and Seeq to track voltage drift and hydrogen production for 10 lab-scale electrolyzers"
     ],
-    "description": "Industry research at Verdagy on green hydrogen electrolyzer performance. Built Python pipelines to ingest, denoise, and align multivariate sensor streams from 10 lab-scale electrolyzers, then trained models to predict voltage discharge curves under simulated renewable-energy intermittency. Insights informed material durability decisions for next-generation cells."
+    "description": "Industry research at Verdagy on alkaline electrolyzer performance. Built Python pipelines to ingest, denoise, and align multivariate sensor streams from 10 lab-scale electrolyzers, then designed nine dashboards in Python and Seeq for real-time monitoring of voltage drift and hydrogen production — enabling faster R&D decision-making for scientists and executives."
   },
   {
     "id": "yelp-sentiment",
     "title": "Yelp Sentiment Analysis",
-    "subtitle": "NLP on millions of reviews to quantify customer satisfaction",
-    "image": "images/techmag.png",
+    "subtitle": "UC Berkeley · NLP project",
+    "image": "images/projects/nlp.svg",
     "categories": ["NLP", "Machine Learning"],
     "tools": ["Python", "NLP", "scikit-learn", "Pandas"],
     "highlights": [
@@ -126,42 +126,45 @@
   {
     "id": "mongo-vs-sql",
     "title": "MongoDB vs SQL · Query Performance Analysis",
-    "subtitle": "Benchmarking relational vs. document stores on the Yelp dataset",
+    "subtitle": "UC Berkeley · Data Engineering",
+    "image": "images/projects/data-engineering.svg",
     "categories": ["Data Engineering"],
-    "tools": ["MongoDB", "PostgreSQL", "Python", "Benchmarking"],
+    "tools": ["MongoDB", "SQL", "Python", "Benchmarking"],
     "highlights": [
       "Benchmarked equivalent analytical queries across MongoDB and SQL",
       "Compared query speed, scalability, and developer ergonomics",
       "Wrote up recommendations for when to choose each store"
     ],
-    "description": "Data-engineering project that puts MongoDB and a relational SQL store head-to-head on the Yelp dataset. Equivalent analytical queries were authored in both systems and benchmarked across speed, scalability, and ease of expression to inform when each technology is the right tool."
+    "description": "Data-engineering project that puts MongoDB and a relational SQL store head-to-head on the Yelp dataset. Equivalent analytical queries were authored in both systems and benchmarked across speed, scalability, and ease of expression, informing when each technology is the right tool."
   },
   {
     "id": "marketing-kaggle",
-    "title": "Marketing Analytics · Kaggle Competition (Top 10)",
-    "subtitle": "Product-analytics modeling that placed in the top 10 on the leaderboard",
-    "categories": ["Product Analytics", "Machine Learning", "Competition"],
+    "title": "Product Analytics · Marketing Kaggle Competition",
+    "subtitle": "MIT Sloan · Product Analytics · Top 10 leaderboard finish",
+    "image": "images/projects/product-analytics.svg",
+    "categories": ["Product Analytics", "Machine Learning"],
     "tools": ["Python", "scikit-learn", "Feature Engineering", "Gradient Boosting"],
     "highlights": [
       "Top-10 leaderboard finish in a class-wide marketing-analytics Kaggle competition",
-      "Heavy feature engineering and ensembling on customer behavior data",
+      "Heavy feature engineering and ensembling on customer-behavior data",
       "Demonstrates practical product-analytics modeling end-to-end"
     ],
-    "description": "Kaggle-style marketing analytics competition (Assignment 3) where my team placed in the top 10 on the leaderboard. The project involved heavy feature engineering on customer behavior data and ensembling of gradient-boosted models. It is highlighted here as evidence of practical product-analytics work, even though the underlying notebook is not posted on this site.",
+    "description": "Kaggle-style marketing analytics competition where my team placed in the top 10 on the leaderboard. The project involved heavy feature engineering on customer-behavior data and ensembling of gradient-boosted models, included here as evidence of practical product-analytics work.",
     "noReport": true
   },
   {
     "id": "espm-arcgis",
-    "title": "ArcGIS Mapping · ESPM 110 Environmental Analyses",
-    "subtitle": "Spatial analyses of environmental and ecological systems",
-    "categories": ["GIS", "Environmental"],
+    "title": "ArcGIS Mapping · ESPM 110",
+    "subtitle": "UC Berkeley · Environmental health spatial analyses",
+    "image": "images/projects/gis.svg",
+    "categories": ["GIS"],
     "tools": ["ArcGIS Pro", "Spatial Analysis", "Cartography"],
     "highlights": [
-      "Produced map deliverables for UC Berkeley's ESPM 110 course",
+      "Produced map deliverables for UC Berkeley's ESPM 110",
       "Layered ecological and demographic data for environmental analysis",
       "Practiced classical cartographic design for technical reports"
     ],
-    "description": "Selected map outputs from coursework in UC Berkeley's ESPM 110 (The Politics & Ecology of Environmental Health). The full reports are coursework, but the map deliverables — included on the dedicated Maps page — showcase my hands-on ArcGIS work: data layering, spatial joins, classification, and cartographic design.",
+    "description": "Selected map outputs from coursework in UC Berkeley's ESPM 110 (The Politics & Ecology of Environmental Health). The full reports are coursework, but the map deliverables — included on the dedicated Maps page — showcase hands-on ArcGIS work: data layering, spatial joins, classification, and cartographic design.",
     "noReport": true
   }
 ]

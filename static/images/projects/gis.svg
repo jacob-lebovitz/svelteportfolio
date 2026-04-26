@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="GIS Cartography">
+  <rect width="800" height="500" fill="#0f172a"/>
+  <g stroke="#94a3b8" stroke-width="1.25" fill="none" opacity="0.18">
+    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800"/>
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500"/>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="2.25" fill="none" stroke-linejoin="round">
+    <path d="M150 130 L300 100 L460 150 L620 110 L640 290 L500 330 L320 280 L160 320 Z"/>
+  </g>
+  <g stroke="#94a3b8" stroke-width="1.25" fill="none" opacity="0.55">
+    <path d="M160 200 C 280 220, 360 180, 460 220 S 600 250, 640 240"/>
+    <path d="M180 260 C 290 280, 360 240, 480 280 S 600 300, 640 290"/>
+  </g>
+  <g fill="#e2e8f0">
+    <circle cx="280" cy="180" r="5"/>
+    <circle cx="420" cy="220" r="5"/>
+    <circle cx="540" cy="200" r="5"/>
+  </g>
+  <text x="60" y="450" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="600" letter-spacing="3" fill="#94a3b8">GIS · CARTOGRAPHY</text>
+</svg>
