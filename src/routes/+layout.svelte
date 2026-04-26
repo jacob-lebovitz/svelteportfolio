@@ -1,6 +1,7 @@
 <script>
   import { base } from "$app/paths";
   import { page } from "$app/stores";
+  import Beaver from "$lib/Beaver.svelte";
 
   let pages = [
     { url: "/", title: "Home" },
@@ -21,6 +22,8 @@
   let root = globalThis.document?.documentElement;
   $: root?.style.setProperty("color-scheme", colorScheme);
 </script>
+
+<Beaver />
 
 <header class="site-header">
   <a class="brand" href={base + "/"}>
