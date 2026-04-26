@@ -1,5 +1,4 @@
 <script>
-  import { base } from "$app/paths";
   import { asset } from "$lib/asset.js";
   import maps from "$lib/maps.json";
 </script>
@@ -27,24 +26,16 @@
     </p>
   </section>
 {:else}
-  <div class="map-grid">
+  <div class="map-list">
     {#each maps as m}
       <article class="map-card">
-        <a class="map-thumb" href={asset(m.file)} target="_blank" rel="noopener noreferrer" aria-label="Open {m.title} in a new tab">
-          {#if m.image}
-            <img src={asset(m.image)} alt={m.title} loading="lazy" />
-          {:else}
-            <span class="thumb-label">ArcGIS map</span>
-            <span class="thumb-ext">PDF</span>
-          {/if}
-        </a>
-        <div class="map-body">
+        <header class="map-head">
           <h2>{m.title}</h2>
-          <p>{m.caption}</p>
-          <a class="link" href={asset(m.file)} target="_blank" rel="noopener noreferrer">
-            Open map ↗
-          </a>
-        </div>
+        </header>
+        <p>{m.caption}</p>
+        <a class="link" href={asset(m.file)} target="_blank" rel="noopener noreferrer">
+          Open map ↗
+        </a>
       </article>
     {/each}
   </div>
@@ -83,20 +74,20 @@
     line-height: 1.6;
   }
 
-  .map-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  .map-list {
+    display: flex;
+    flex-direction: column;
     gap: 1.25rem;
   }
 
   .map-card {
-    margin: 0;
     border: 1px solid var(--rule);
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 10px;
     background-color: var(--paper);
+    padding: 1.5rem 1.75rem 1.6rem;
     display: flex;
     flex-direction: column;
+    gap: 0.55rem;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
   .map-card:hover {
@@ -104,82 +95,26 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
   }
 
-  .map-thumb {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0;
-    aspect-ratio: 4 / 3;
-    background:
-      linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
-    border-bottom: 1px solid var(--rule);
-    text-decoration: none;
-    color: var(--ink-soft);
-    position: relative;
-    overflow: hidden;
-  }
-  .map-thumb::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(var(--rule) 1px, transparent 1px),
-      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
-    background-size: 32px 32px;
-    opacity: 0.35;
-  }
-  .map-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .thumb-label {
-    position: relative;
-    margin: 0 0 0.9rem 1rem;
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
+  .map-card h2 {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+    line-height: 1.2;
     font-weight: 600;
-    color: var(--muted);
+    letter-spacing: -0.01em;
   }
-  .thumb-ext {
-    position: relative;
-    margin: 0 1rem 0.85rem 0;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    padding: 0.15em 0.5em;
-    border-radius: 4px;
-    border: 1px solid var(--rule-strong);
-    color: var(--ink);
-    background-color: var(--paper);
+  .map-card p {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
   }
 
-  .map-body {
-    padding: 0.95rem 1.1rem 1.1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .map-body h2 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.3;
-  }
-  .map-body p {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: var(--muted);
-  }
   .link {
     margin-top: 0.3rem;
     color: var(--ink);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     border-bottom: 1px solid var(--rule-strong);
     padding-bottom: 1px;
     align-self: flex-start;

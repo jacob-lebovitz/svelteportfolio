@@ -3,9 +3,17 @@
     "id": "conagra",
     "title": "Conagra Brands · Production Line Scheduling",
     "subtitle": "MIT Sloan Capstone · Data Science Capstone Intern",
-    "image": "images/projects/conagra.svg",
-    "categories": ["Optimization"],
-    "tools": ["Databricks", "SAP", "Power BI", "Python", "Agentic AI", "Mixed-Integer Optimization"],
+    "categories": [
+      "Optimization"
+    ],
+    "tools": [
+      "Databricks",
+      "SAP",
+      "Power BI",
+      "Python",
+      "Agentic AI",
+      "Mixed-Integer Optimization"
+    ],
     "highlights": [
       "Building a production-line scheduling tool that helps plant managers minimize equipment downtime and changeover costs across a multi-line manufacturing facility",
       "Establishing a scalable blueprint for company-wide data standardization across Databricks, SAP, and Power BI so the same scheduling pipeline can extend to additional plants",
@@ -21,9 +29,17 @@
     "id": "drc-water",
     "title": "Optimization · Water Access in the DRC",
     "subtitle": "MIT Sloan · Optimization Methods · Fall 2025",
-    "image": "images/projects/drc-water.svg",
-    "categories": ["Optimization", "Geospatial"],
-    "tools": ["Julia", "JuMP", "Mixed-Integer Optimization", "Geospatial Data", "K-Means"],
+    "categories": [
+      "Optimization",
+      "Geospatial"
+    ],
+    "tools": [
+      "Julia",
+      "JuMP",
+      "Mixed-Integer Optimization",
+      "Geospatial Data",
+      "K-Means"
+    ],
     "highlights": [
       "Built a two-stage mixed-integer program in Julia / JuMP: pass 1 maximizes covered population subject to a budget; pass 2 minimizes average walking distance while preserving pass-1 coverage",
       "Combined a WorldPop population raster (clipped to the DRC) with the Water Point Data Exchange (WPDx) functional / non-functional well dataset",
@@ -40,9 +56,17 @@
     "id": "solar-battery",
     "title": "Predictive + Prescriptive Solar Battery Strategy",
     "subtitle": "MIT Sloan · 15.095 Machine Learning Under a Modern Optimization Lens · Spring 2026",
-    "image": "images/projects/solar-battery.svg",
-    "categories": ["Machine Learning", "Optimization"],
-    "tools": ["Julia", "Python", "Time-Series Forecasting", "Robust Optimization", "Second-Order Cone Programming"],
+    "categories": [
+      "Machine Learning",
+      "Optimization"
+    ],
+    "tools": [
+      "Julia",
+      "Python",
+      "Time-Series Forecasting",
+      "Robust Optimization",
+      "Second-Order Cone Programming"
+    ],
     "highlights": [
       "Built a predictive-to-prescriptive framework for a solar-paired battery in the SDG&E (San Diego Gas & Electric) market",
       "Predictive layer: forecasted next-day solar generation from NSRDB irradiance / temperature data and forecasted SDG&E day-ahead Locational Marginal Prices",
@@ -59,9 +83,18 @@
     "id": "bphc-shelter",
     "title": "Boston Public Health Commission · Shelter Occupancy Forecasting",
     "subtitle": "MIT Sloan · Analytics Lab · ML Project Lead · Fall 2025",
-    "image": "images/projects/bphc-shelter.svg",
-    "categories": ["Machine Learning"],
-    "tools": ["Python", "scikit-learn", "Random Forest", "Gradient Boosting", "ARIMA", "LASSO", "Streamlit"],
+    "categories": [
+      "Machine Learning"
+    ],
+    "tools": [
+      "Python",
+      "scikit-learn",
+      "Random Forest",
+      "Gradient Boosting",
+      "ARIMA",
+      "LASSO",
+      "Streamlit"
+    ],
     "highlights": [
       "Developed 14-day forecasts of daily bed demand for the BPHC's two main shelters: 112 Southampton (men's) and Woods Mullen (women's), spanning 2015–2025 of historical data",
       "Trained a multi-model stack — linear regression for interpretation, LASSO for balance, and ensemble methods (Random Forest, Gradient Boosting, ARIMA) for performance — and engineered lagged T-14 → T relationships so forecasts can be made without future inputs",
@@ -78,9 +111,15 @@
     "id": "boston-viz",
     "title": "Greater Boston · Data Visualization Proof of Concept",
     "subtitle": "MIT MBAn · Data Visualization team project",
-    "image": "images/projects/boston-viz.svg",
-    "categories": ["Geospatial"],
-    "tools": ["JavaScript", "D3", "GeoJSON", "Web"],
+    "categories": [
+      "Geospatial"
+    ],
+    "tools": [
+      "JavaScript",
+      "D3",
+      "GeoJSON",
+      "Web"
+    ],
     "highlights": [
       "Interactive proof-of-concept visualization of Greater Boston combining geospatial layers with chart-driven detail panels",
       "Explores how careful chart design and cartographic layering can make a complex regional dataset legible and navigable",
@@ -95,9 +134,16 @@
     "id": "trading-strategies",
     "title": "Mean Reversion + Momentum Trading Strategies",
     "subtitle": "MIT Sloan · 15.C51 Proprietary Trading · Spring 2026",
-    "image": "images/projects/trading-strategies.svg",
-    "categories": ["Machine Learning"],
-    "tools": ["Python", "scikit-learn", "Walk-Forward Validation", "Information Coefficient", "Feature Selection"],
+    "categories": [
+      "Machine Learning"
+    ],
+    "tools": [
+      "Python",
+      "scikit-learn",
+      "Walk-Forward Validation",
+      "Information Coefficient",
+      "Feature Selection"
+    ],
     "highlights": [
       "Developed and backtested two opposing ML-driven trading strategies — mean reversion and momentum — on 29 DJIA constituents over 2015–2026",
       "Engineered features from technical indicators, cross-sectional return ranks, sector momentum, and calendar signals, then filtered them by Information Coefficient and pairwise redundancy pruning",
@@ -114,9 +160,17 @@
     "id": "f1-emissions",
     "title": "Optimization · F1 Race Calendar Redesign",
     "subtitle": "UC Berkeley · IEOR 162 · Nonlinear & Discrete Optimization",
-    "image": "images/projects/f1-emissions.svg",
-    "categories": ["Optimization", "Geospatial"],
-    "tools": ["AMPL", "Python", "R", "Mixed-Integer Optimization", "Routing"],
+    "categories": [
+      "Optimization",
+      "Geospatial"
+    ],
+    "tools": [
+      "AMPL",
+      "Python",
+      "R",
+      "Mixed-Integer Optimization",
+      "Routing"
+    ],
     "highlights": [
       "Modeled the 2024 Formula 1 calendar as a constrained TSP / sequencing optimization in AMPL, with binary x_{i,j} variables over all 22 race cities (484 city pairs)",
       "Computed Haversine distances between every city pair using a custom R + geosphere preprocessing pipeline that parsed JSON race data into a distance matrix",
@@ -131,9 +185,17 @@
     "id": "yelp-deep-learning",
     "title": "Yelp Sentiment & Star Rating Prediction",
     "subtitle": "MIT Sloan · Deep Learning · Fall 2025",
-    "image": "images/projects/yelp-deep-learning.svg",
-    "categories": ["Machine Learning"],
-    "tools": ["Python", "PyTorch", "Keras", "BERT", "GloVe", "CountVectorizer"],
+    "categories": [
+      "Machine Learning"
+    ],
+    "tools": [
+      "Python",
+      "PyTorch",
+      "Keras",
+      "BERT",
+      "GloVe",
+      "CountVectorizer"
+    ],
     "highlights": [
       "Cast Yelp star-rating prediction as a regression problem from raw review text and trained neural networks at three levels of representation: bag-of-words counts, pretrained GloVe embeddings, and a frozen BERT backbone with a regression head",
       "Built two working datasets (1,000 and 26,318 reviews) with reproducible 80/20 train-test and 90/10 train-val splits to enable apples-to-apples comparison across representations and dataset sizes",
@@ -148,9 +210,16 @@
     "id": "mongo-vs-sql",
     "title": "MongoDB vs SQL · Yelp Query Benchmarking",
     "subtitle": "UC Berkeley · Data 101 Final Project",
-    "image": "images/projects/mongo-vs-sql.svg",
-    "categories": ["Data Engineering"],
-    "tools": ["PostgreSQL", "MongoDB", "Python", "psycopg2", "EXPLAIN ANALYZE"],
+    "categories": [
+      "Data Engineering"
+    ],
+    "tools": [
+      "PostgreSQL",
+      "MongoDB",
+      "Python",
+      "psycopg2",
+      "EXPLAIN ANALYZE"
+    ],
     "highlights": [
       "Sampled the Yelp Academic Dataset down to ~50k users, ~50k businesses, and ~1M reviews to fit local PostgreSQL 14 and MongoDB instances",
       "Authored matched analytical queries in both engines — top businesses by state, top reviewers, multi-step aggregations — and benchmarked them with EXPLAIN ANALYZE and MongoDB's own explain plans",
@@ -165,9 +234,16 @@
     "id": "voltage-discharge",
     "title": "Voltage Discharge Prediction · Hydrogen Electrolyzers",
     "subtitle": "Verdagy · Data Science Intern · Summer 2024",
-    "image": "images/projects/voltage-discharge.svg",
-    "categories": ["Machine Learning"],
-    "tools": ["Python", "Seeq", "Pandas", "Time-Series", "Sensor Data"],
+    "categories": [
+      "Machine Learning"
+    ],
+    "tools": [
+      "Python",
+      "Seeq",
+      "Pandas",
+      "Time-Series",
+      "Sensor Data"
+    ],
     "highlights": [
       "Automated Python algorithms to ingest real-time raw sensor streams from 10 lab-scale alkaline electrolyzers, removing noise, outliers, and detected sensor malfunctions",
       "Reduced data-cleaning labor by 80% and improved the accuracy of downstream summary statistics that fed scientist-facing dashboards",
@@ -181,9 +257,15 @@
     "id": "marketing-kaggle",
     "title": "Product Analytics · Marketing Kaggle Competition",
     "subtitle": "MIT Sloan · Product Analytics · Top 10 leaderboard finish",
-    "image": "images/projects/marketing-kaggle.svg",
-    "categories": ["Machine Learning"],
-    "tools": ["Python", "scikit-learn", "Feature Engineering", "Gradient Boosting"],
+    "categories": [
+      "Machine Learning"
+    ],
+    "tools": [
+      "Python",
+      "scikit-learn",
+      "Feature Engineering",
+      "Gradient Boosting"
+    ],
     "highlights": [
       "Top-10 leaderboard finish in a class-wide marketing-analytics Kaggle competition",
       "Heavy feature engineering on customer-behavior data — recency / frequency / monetary aggregates, interaction terms, and tenure features",
@@ -197,9 +279,15 @@
     "id": "espm-arcgis",
     "title": "ArcGIS Mapping · ESPM 110",
     "subtitle": "UC Berkeley · Environmental health spatial analyses",
-    "image": "images/projects/espm-arcgis.svg",
-    "categories": ["Geospatial"],
-    "tools": ["ArcGIS Pro", "DEM", "Spatial Analysis", "Cartography"],
+    "categories": [
+      "Geospatial"
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "DEM",
+      "Spatial Analysis",
+      "Cartography"
+    ],
     "highlights": [
       "Produced map deliverables for UC Berkeley's ESPM 110 (The Politics & Ecology of Environmental Health)",
       "Worked through full GIS workflows — DEM-based hydrologic flow direction around Strawberry Creek, fire-risk overlays of the Berkeley Hills combining slope, road networks, and land-management classifications",
