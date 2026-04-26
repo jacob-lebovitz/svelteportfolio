@@ -1,88 +1,101 @@
+<script>
+  import { base } from "$app/paths";
+
+  const resumePath = `${base}/resume/Jacob-Lebovitz-Resume.pdf`;
+</script>
+
 <svelte:head>
-  <title>Resume</title>
+  <title>Resume · Jacob Lebovitz</title>
 </svelte:head>
 
-
+<header class="page-head">
+  <p class="eyebrow">Document</p>
   <h1>Resume</h1>
-  <section>
-    <header><h2>Education</h2></header>
+  <p class="lede">
+    My one-page resume is below. You can also open the full PDF in a new tab or download it
+    directly.
+  </p>
+  <div class="cta-row">
+    <a class="cta primary" href={resumePath} target="_blank" rel="noopener noreferrer">
+      Open PDF in new tab ↗
+    </a>
+    <a class="cta" href={resumePath} download>
+      Download PDF
+    </a>
+  </div>
+</header>
 
-    <article>
-      <h3>Massachusetts Institute of Technology, Sloan School of Management</h3>
-      <p><strong>Candidate for Master of Business Analytics</strong>, Operations Research Center, Cambridge, MA</p>
-      <p><time datetime="2025-08">2025 – Present</time></p>
-      <ul>
-        <li>Coursework: Machine Learning, Optimization Methods, Deep Learning, Analytics Lab</li>
-        <li>Machine Learning Project: Developed optimized schedule in Julia to prescribe battery charging, holding, and selling strategies for electricity storage using predicted solar energy and next-day market pricing in Southern California</li>
-        <li>Optimization Project: Built scalable pipelines in Julia to identify high-impact locations for new wells in the DRC, improving access to water by 19%</li>
-        <li>Activities: Sloan Pride Leadership Board (Social VP), Impact Investing Club, MIT Triathlon Club</li>
-      </ul>
-    </article>
+<section class="quick-summary">
+  <h2>At a glance</h2>
+  <ul>
+    <li><strong>MIT Sloan</strong> — Master of Business Analytics candidate (Operations Research Center), 2025–Present.</li>
+    <li><strong>UC Berkeley</strong> — B.A. Data Science (Applied Math &amp; Modeling); Minor in Sustainable Design, 2021–2025.</li>
+    <li><strong>Industry experience</strong> — Verdagy (Data Science Intern), Boston Public Health Commission (Analytics Lab), UC Berkeley (Probability TA).</li>
+    <li><strong>Core skills</strong> — Python, SQL, R, Julia, Keras, Probability, AMPL, JuMP, ArcGIS, Git.</li>
+  </ul>
+</section>
 
-    <article>
-      <h3>University of California, Berkeley</h3>
-      <p><strong>B.A. in Data Science (Applied Math & Modeling); Minor in Sustainable Design</strong>, Berkeley, CA</p>
-      <p><time datetime="2021-08">2021 – 2025</time></p>
-      <ul>
-        <li>Coursework: Data Engineering, Data Structures, Nonlinear & Discrete Optimization, Abstract Linear Algebra</li>
-        <li>Optimization Project: Rescheduled F1 races in AMPL to minimize travel distance and reduce average emissions by 927 tons of CO₂ per team</li>
-        <li>Activities: Cal Triathlon Club (Treasurer, Athlete), Part-time data science researcher on voltage discharge predictions</li>
-        <li>Awards: General Distinction and 3-time Dean’s List recipient</li>
-      </ul>
-    </article>
-  </section>
+<style>
+  .page-head { margin: 1.5rem 0 1.5rem; }
+  .page-head h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 0.2rem 0 0.5rem;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0;
+  }
+  .lede { max-width: 70ch; line-height: 1.6; margin: 0; }
 
-  <!-- Technical Skills Section -->
-  <section>
-    <header><h2>Technical Skills</h2></header>
-    <p>Python, SQL, R, Julia, Keras, Probability Theory, MATLAB, Arduino, Seeq, AMPL, JuMP, ArcGIS, Git</p>
-  </section>
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .cta {
+    display: inline-block;
+    padding: 0.6em 1.1em;
+    border-radius: 999px;
+    border: 1.5px solid color-mix(in oklch, var(--color-accent), transparent 60%);
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .cta:hover {
+    transform: translateY(-1px);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 88%);
+    border-color: var(--color-accent);
+  }
+  .cta.primary {
+    background-color: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+  }
+  .cta.primary:hover {
+    background-color: color-mix(in oklch, var(--color-accent), black 10%);
+  }
 
-  <!-- Experience Section -->
-  <section>
-    <header><h2>Experience</h2></header>
-
-    <article>
-      <h3>MIT Sloan / Boston Public Health Commission</h3>
-      <p><strong>Analytics Lab Project Team Member</strong>, Cambridge, MA</p>
-      <p><time datetime="2025-09">Fall 2025</time></p>
-      <ul>
-        <li>Built and deployed ML models in Python (Random Forest, Gradient Boosting, ARIMA) to forecast 14-day homeless shelter occupancy, reducing overflow risk by improving capacity predictions by 50%</li>
-        <li>Identified key social, environmental, and temporal predictors of shelter utilization through feature importance analysis, presenting interpretable insights to program managers and city partners</li>
-      </ul>
-    </article>
-
-    <article>
-      <h3>Verdagy, Monterey, CA</h3>
-      <p><strong>Data Science Intern</strong> – Summer 2024</p>
-      <ul>
-        <li>Engineered dashboards using Seeq and Python to monitor voltage drift and hydrogen production for 10 lab-scale electrolyzers</li>
-        <li>Developed Python algorithms to remove noise, outliers, and sensor malfunctions; reduced data cleaning labor by 80%</li>
-        <li>Analyzed electrolyzer performance degradation patterns under simulated renewable energy intermittency</li>
-      </ul>
-      <p><strong>System Engineering Intern</strong> – Summer 2023</p>
-      <ul>
-        <li>Constructed 7 lab-scale electrolyzers with Arduino-based boards, voltage sensors, and automated shutdown fail-safes</li>
-        <li>Authored detailed build and operating procedures for lab replication</li>
-      </ul>
-    </article>
-
-    <article>
-      <h3>University of California, Berkeley</h3>
-      <p><strong>Data Science Teaching Assistant – Probability for Data Science</strong>, Berkeley, CA</p>
-      <p><time datetime="2024-08">2024 – 2025</time></p>
-      <ul>
-        <li>Designed and taught 2-hour discussion section for 40 students covering advanced probability topics</li>
-        <li>Tutored 40 students weekly during office hours; topics ranged from discrete case studies to theoretical math proofs</li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- Additional Information Section -->
-  <section>
-    <header><h2>Additional Information</h2></header>
-    <ul>
-      <li>Languages: Spanish (conversational)</li>
-      <li>Interests: Classical pianist (13 years), endurance fitness (2024 San Francisco Marathon finisher, USA Collegiate Triathlon)</li>
-    </ul>
-  </section>
+  .quick-summary {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 14px;
+    border: 1px solid color-mix(in oklch, var(--color-accent), transparent 80%);
+    background-color: color-mix(in oklch, canvas, var(--color-accent) 3%);
+  }
+  .quick-summary h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+  .quick-summary ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    line-height: 1.55;
+  }
+  .quick-summary li { margin-bottom: 0.4rem; }
+</style>

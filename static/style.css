@@ -1,5 +1,7 @@
 :root {
-  --color-accent: oklch(46.448% 0.2089 284.704); 
+  --color-accent: oklch(58% 0.19 264);
+  --bg-grad-1: oklch(20% 0.04 280);
+  --bg-grad-2: oklch(15% 0.03 240);
 }
 
 html {
@@ -7,15 +9,21 @@ html {
 }
 
 body {
- 
-font: 100%/1.5 system-ui;
-
-max-width: 100ch;
-
-margin-inline: auto;
-
-padding: 1em;
+  font: 100%/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 1rem 1.25rem 2rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background:
+      radial-gradient(ellipse at top left, color-mix(in oklch, var(--color-accent), transparent 88%), transparent 60%),
+      radial-gradient(ellipse at bottom right, color-mix(in oklch, #4facfe, transparent 88%), transparent 60%);
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -25,91 +33,57 @@ input,
 textarea,
 button,
 select {
-  font: inherit; 
+  font: inherit;
+}
+
+a {
+  color: var(--color-accent);
 }
 
 form {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1em;   
-} 
-
-form label {
-  display: grid;
-  grid-template-columns: subgrid;  
-  align-items: center;
-  grid-column: 1 / -1;            
-}
-
-form button {
-  grid-column: 1 / -1;            
-  padding: 0.5em;                
-  font: inherit;               
-}
-
-.projects {
-  display: grid;  
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1em;
 }
 
-.projects section {
+form label {
   display: grid;
-  grid-template-rows: subgrid; 
-  grid-row: span 3;           
+  grid-template-columns: subgrid;
+  align-items: center;
+  grid-column: 1 / -1;
 }
 
-.projects h2 {
-  margin: 0; 
+form button {
+  grid-column: 1 / -1;
+  padding: 0.6em 1em;
+  font: inherit;
+  border-radius: 8px;
+  border: 1px solid color-mix(in oklch, var(--color-accent), transparent 50%);
+  background-color: var(--color-accent);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+form button:hover {
+  filter: brightness(1.05);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  gap: 1.25rem;
 }
 
 h1 {
-  font-size: 400%;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.01em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1;     
-  text-wrap: balance;  
+  line-height: 1.2;
+  text-wrap: balance;
 }
 
-
-
-/* Resume */
-
-.resume-page {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.5;
-  color: #222;
-}
-
-.resume-page h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-}
-
-
-.resume-page article {
-  margin-bottom: 18px;
-}
-
-.resume-page article p {
-  margin: 2px 0;
-}
-
-.resume-page time {
-  float: right;
-  font-size: 0.9rem;
-}
-
-.resume-page ul {
-  margin-top: 6px;
-  padding-left: 20px;
-}
-
-.resume-page li {
-  margin-bottom: 6px;
-  font-size: 0.95rem;
+section + section {
+  margin-top: 2.5rem;
 }
