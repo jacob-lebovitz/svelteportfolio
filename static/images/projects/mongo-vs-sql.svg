@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="MongoDB vs SQL · Query Benchmarks">
+  <rect width="800" height="500" fill="#0f172a"/>
+  <g stroke="#94a3b8" stroke-width="1.25" fill="none" opacity="0.18">
+    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800"/>
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500"/>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="2.5" fill="none">
+    <ellipse cx="240" cy="150" rx="90" ry="22"/>
+    <path d="M150 150 V300 a90 22 0 0 0 180 0 V150"/>
+    <path d="M150 200 a90 22 0 0 0 180 0"/>
+    <path d="M150 250 a90 22 0 0 0 180 0"/>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="2.5" fill="none">
+    <circle cx="540" cy="180" r="40"/>
+    <circle cx="540" cy="180" r="22"/>
+    <circle cx="540" cy="270" r="40"/>
+    <circle cx="540" cy="270" r="22"/>
+    <line x1="540" y1="180" x2="540" y2="270" opacity="0.55"/>
+    <line x1="500" y1="200" x2="500" y2="250" opacity="0.55"/>
+    <line x1="580" y1="200" x2="580" y2="250" opacity="0.55"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="14" fill="#94a3b8" font-weight="600" letter-spacing="2">
+    <text x="240" y="350" text-anchor="middle">SQL</text>
+    <text x="540" y="350" text-anchor="middle">DOCUMENT</text>
+  </g>
+  <text x="60" y="450" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="600" letter-spacing="3" fill="#94a3b8">QUERY BENCHMARK</text>
+</svg>
