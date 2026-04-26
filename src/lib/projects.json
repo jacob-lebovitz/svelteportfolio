@@ -29,23 +29,24 @@
       "Improved projected access to water by 19%"
     ],
     "description": "MIT Sloan Optimization Methods project applying mixed-integer programming to humanitarian infrastructure planning. The model selects new well locations across the Democratic Republic of Congo to maximize population reached and minimize travel distance to clean water, subject to budget and geographic constraints. Pipelines were built to scale across very large candidate-site sets and to compare multiple policy scenarios.",
-    "report": "reports/drc-water-access.pdf",
+    "report": "reports/Optimisation_Report_Overleaf_final (2).pdf",
     "featured": true
   },
   {
     "id": "solar-battery",
     "title": "Predictive + Prescriptive Solar Battery Strategy",
-    "subtitle": "MIT Sloan · Machine Learning",
+    "subtitle": "MIT Sloan · Machine Learning Under a Modern Optimization Lens",
     "image": "images/projects/machine-learning.svg",
     "categories": ["Machine Learning", "Optimization", "Energy"],
-    "tools": ["Julia", "Python", "Time-Series Forecasting", "Mixed-Integer Optimization"],
+    "tools": ["Julia", "Python", "Time-Series Forecasting", "Robust Optimization"],
     "highlights": [
       "Designed an optimized schedule in Julia to prescribe battery charging, holding, and selling strategies",
-      "Forecasted next-day solar energy availability and electricity market prices",
+      "Forecasted next-day solar generation and SDG&E day-ahead market prices",
+      "Built a predictive-to-prescriptive framework with robust optimization to handle price uncertainty",
       "Increased projected profits by 20%"
     ],
-    "description": "MIT Sloan Machine Learning project that combines predictive modeling and prescriptive optimization to operate a grid-scale battery. The predictive layer forecasts next-day solar generation and market prices; the prescriptive layer is an optimization in Julia that decides charging, holding, and selling actions to maximize revenue subject to physical battery constraints. The full pipeline demonstrates how ML and optimization can be cleanly chained together end-to-end.",
-    "report": "reports/solar-battery.pdf",
+    "description": "MIT Sloan Machine Learning project that combines predictive modeling and prescriptive optimization to operate a solar-paired battery in San Diego. The predictive layer forecasts next-day solar generation and SDG&E day-ahead prices; the prescriptive layer is an optimization in Julia that decides charging, holding, and selling actions to maximize revenue, with a robust formulation to handle price uncertainty. The pipeline demonstrates how ML and optimization can be cleanly chained together end-to-end.",
+    "report": "reports/machinelearning (1).pdf",
     "featured": true
   },
   {
@@ -62,7 +63,7 @@
       "Selected for poster presentation at the 2026 CSTE Annual Conference (Boston, MA), reaching 2,800+ public health professionals"
     ],
     "description": "MIT Sloan Analytics Lab project with the Boston Public Health Commission. The team built and deployed a suite of machine-learning models — Random Forest, Gradient Boosting, and ARIMA — to forecast 14-day occupancy across the city's homeless shelter network, with results integrated into a Streamlit application for program managers. Feature-importance and interpretability analysis surfaced the social, environmental, and temporal factors driving demand, enabling better resource allocation. The work was selected for poster presentation at the 2026 CSTE Annual Conference.",
-    "report": "reports/bphc-shelter.pdf",
+    "report": "reports/Final- BPHC_ALab Report_3.pdf",
     "featured": true
   },
   {
@@ -82,18 +83,65 @@
     "featured": true
   },
   {
+    "id": "trading-strategies",
+    "title": "Mean Reversion + Momentum Trading Strategies",
+    "subtitle": "MIT Sloan · 15.C51 Proprietary Trading · Spring 2026",
+    "image": "images/projects/forecasting.svg",
+    "categories": ["Machine Learning", "Forecasting", "Finance"],
+    "tools": ["Python", "scikit-learn", "Walk-Forward Validation", "Feature Selection"],
+    "highlights": [
+      "Developed and backtested mean-reversion and momentum ML strategies on 29 DJIA constituents over 2015–2026",
+      "Trained 120 models across six model types, two strategies, and five holding periods using purged walk-forward validation with 180-day embargo windows",
+      "5-day mean-reversion model achieved a Sharpe ratio of 1.34 and CAGR of 19.9% on the test set",
+      "63-day momentum model produced consistent positive risk-adjusted returns (Sharpe 1.73 / 0.70 / 3.50 across validation, test, and embargo)"
+    ],
+    "description": "MIT Sloan 15.C51 Proprietary Trading project that builds and rigorously backtests two opposing strategies — mean reversion and momentum — on DJIA constituents, with strict purged walk-forward validation and embargo windows to prevent leakage. The two strategies turn out to be regime-complementary, motivating a volatility-conditioned allocation rather than either approach in isolation.",
+    "report": "reports/15_C51_Project_1___Trading (2).pdf"
+  },
+  {
     "id": "f1-emissions",
     "title": "Optimization · F1 Race Calendar Redesign",
-    "subtitle": "UC Berkeley · Nonlinear & Discrete Optimization",
+    "subtitle": "UC Berkeley · IEOR 162 · Nonlinear & Discrete Optimization",
     "image": "images/projects/optimization.svg",
     "categories": ["Optimization", "Sustainability"],
     "tools": ["AMPL", "Mixed-Integer Optimization", "Routing"],
     "highlights": [
       "Modeled the Formula 1 calendar as a routing / sequencing optimization in AMPL",
-      "Re-sequenced races to minimize travel distance while maintaining venue requirements",
+      "Re-sequenced races to minimize travel distance while maintaining venue and weather constraints",
       "Cut average emissions by an estimated 927 tons of carbon dioxide per team"
     ],
-    "description": "UC Berkeley Nonlinear & Discrete Optimization project that re-imagines the Formula 1 calendar as a constrained routing problem. The AMPL model finds a re-ordering of races that minimizes global travel distance while respecting venue and seasonal requirements, reducing average emissions by an estimated 927 tons of CO₂ per team."
+    "description": "UC Berkeley IEOR 162 Nonlinear & Discrete Optimization project that re-imagines the Formula 1 calendar as a constrained routing problem. The AMPL model finds a re-ordering of races that minimizes global travel distance while respecting venue, weather, and contractual constraints, reducing average emissions by an estimated 927 tons of CO₂ per team.",
+    "report": "reports/IEOR 162 Project-FINAL.pdf"
+  },
+  {
+    "id": "yelp-deep-learning",
+    "title": "Yelp Sentiment & Star Rating Prediction",
+    "subtitle": "MIT Sloan · Deep Learning",
+    "image": "images/projects/nlp.svg",
+    "categories": ["NLP", "Machine Learning"],
+    "tools": ["Python", "PyTorch", "BERT", "GloVe", "Bag-of-Words"],
+    "highlights": [
+      "Predicted Yelp star ratings directly from review text using neural networks",
+      "Compared bag-of-words, GloVe word embeddings, and BERT contextual embeddings across multiple training sizes",
+      "Studied tradeoffs between model sophistication, data efficiency, and deployment simplicity"
+    ],
+    "description": "MIT Sloan Deep Learning project on the Yelp Open Dataset. The work compares three levels of text representation — one-hot bag-of-words, pretrained GloVe embeddings, and a pretrained BERT transformer — and trains neural networks at each level to predict star ratings directly from review text, evaluating performance as a function of representation and training-set size.",
+    "report": "reports/DL_Writeup.pdf"
+  },
+  {
+    "id": "mongo-vs-sql",
+    "title": "MongoDB vs SQL · Yelp Query Analysis",
+    "subtitle": "UC Berkeley · Data 101 Final Project",
+    "image": "images/projects/data-engineering.svg",
+    "categories": ["Data Engineering"],
+    "tools": ["MongoDB", "PostgreSQL", "Python", "Benchmarking"],
+    "highlights": [
+      "Sampled the Yelp Academic Dataset (~50k users, ~50k businesses, ~1M reviews) into PostgreSQL and MongoDB",
+      "Authored equivalent analytical queries in both systems and benchmarked across speed, scalability, and ergonomics",
+      "Wrote up recommendations for when to choose each store"
+    ],
+    "description": "Data-engineering final project that puts MongoDB and PostgreSQL head-to-head on the Yelp dataset. After loading equivalent samples into both systems, the team authored matched analytical queries and benchmarked them across speed, scalability, and ease of expression, informing when each technology is the right tool.",
+    "report": "reports/D101 Final Project.pdf"
   },
   {
     "id": "voltage-discharge",
@@ -107,35 +155,8 @@
       "Reduced data cleaning labor by 80% and improved summary-statistic accuracy",
       "Designed and rolled out 9 dashboards in Python and Seeq to track voltage drift and hydrogen production for 10 lab-scale electrolyzers"
     ],
-    "description": "Industry research at Verdagy on alkaline electrolyzer performance. Built Python pipelines to ingest, denoise, and align multivariate sensor streams from 10 lab-scale electrolyzers, then designed nine dashboards in Python and Seeq for real-time monitoring of voltage drift and hydrogen production — enabling faster R&D decision-making for scientists and executives."
-  },
-  {
-    "id": "yelp-sentiment",
-    "title": "Yelp Sentiment Analysis",
-    "subtitle": "UC Berkeley · NLP project",
-    "image": "images/projects/nlp.svg",
-    "categories": ["NLP", "Machine Learning"],
-    "tools": ["Python", "NLP", "scikit-learn", "Pandas"],
-    "highlights": [
-      "Tokenized and modeled millions of Yelp reviews",
-      "Quantified sentiment patterns across business categories",
-      "Surfaced category-level satisfaction signal for downstream analysis"
-    ],
-    "description": "UC Berkeley NLP project applying text preprocessing, tokenization, and sentiment classification to the public Yelp Open Dataset. The work measures customer satisfaction at the business and category level and explores the linguistic features most predictive of star ratings."
-  },
-  {
-    "id": "mongo-vs-sql",
-    "title": "MongoDB vs SQL · Query Performance Analysis",
-    "subtitle": "UC Berkeley · Data Engineering",
-    "image": "images/projects/data-engineering.svg",
-    "categories": ["Data Engineering"],
-    "tools": ["MongoDB", "SQL", "Python", "Benchmarking"],
-    "highlights": [
-      "Benchmarked equivalent analytical queries across MongoDB and SQL",
-      "Compared query speed, scalability, and developer ergonomics",
-      "Wrote up recommendations for when to choose each store"
-    ],
-    "description": "Data-engineering project that puts MongoDB and a relational SQL store head-to-head on the Yelp dataset. Equivalent analytical queries were authored in both systems and benchmarked across speed, scalability, and ease of expression, informing when each technology is the right tool."
+    "description": "Industry research at Verdagy on alkaline electrolyzer performance. Built Python pipelines to ingest, denoise, and align multivariate sensor streams from 10 lab-scale electrolyzers, then designed nine dashboards in Python and Seeq for real-time monitoring of voltage drift and hydrogen production — enabling faster R&D decision-making for scientists and executives.",
+    "noReport": true
   },
   {
     "id": "marketing-kaggle",

@@ -1,11 +1,11 @@
 <script>
-  import { base } from "$app/paths";
+  import { asset } from "$lib/asset.js";
   export let data = {};
 </script>
 
 <article class="project-card">
   {#if data.image}
-    <img class="project-img" src="{base}/{data.image}" alt="" loading="lazy" />
+    <img class="project-img" src={asset(data.image)} alt="" loading="lazy" />
   {/if}
 
   <div class="project-body">
@@ -36,7 +36,7 @@
 
     <footer class="links">
       {#if data.report && !data.noReport}
-        <a class="link" href="{base}/{data.report}" target="_blank" rel="noopener noreferrer">
+        <a class="link" href={asset(data.report)} target="_blank" rel="noopener noreferrer">
           View report ↗
         </a>
       {/if}

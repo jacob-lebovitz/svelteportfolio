@@ -1,5 +1,6 @@
 <script>
   import { base } from "$app/paths";
+  import { asset } from "$lib/asset.js";
   import writing from "$lib/writing.json";
 </script>
 
@@ -31,7 +32,7 @@
       <article class="essay-card">
         <header>
           <h2>
-            <a href="{base}/{w.file}" target="_blank" rel="noopener noreferrer">
+            <a href={asset(w.file)} target="_blank" rel="noopener noreferrer">
               {w.title} ↗
             </a>
           </h2>
