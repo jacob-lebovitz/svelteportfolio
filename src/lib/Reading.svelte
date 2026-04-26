@@ -1,11 +1,11 @@
 <script>
+import { base } from "$app/paths";
 export let data = {};
 </script>
 
 <section class="reading-item">
 
-    <!-- Book cover -->
-    <img src={data.image} alt="Cover of {data.title} by {data.author}" />
+    <img src="{base}/{data.image}" alt="Cover of {data.title} by {data.author}" />
 
     <!-- Text content -->
     <div class="reading-details">
