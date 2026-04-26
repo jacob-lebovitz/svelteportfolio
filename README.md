@@ -1,38 +1,63 @@
-# create-svelte
+# jacob-lebovitz.github.io/svelteportfolio
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Personal portfolio site for **Jacob Lebovitz** — built with
+[SvelteKit](https://kit.svelte.dev/) and deployed to GitHub Pages.
 
-## Creating a project
+The site is deployed at:
 
-If you're seeing this, you've probably already done this step. Congrats!
+> https://jacob-lebovitz.github.io/svelteportfolio/
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
+
+Then open the printed local URL.
 
 ## Building
 
-To create a production version of your app:
-
 ```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+## Deployment
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Every push to `main` triggers the GitHub Action in
+`.github/workflows/deploy.yml`, which builds the site and publishes it to
+GitHub Pages. The workflow can also be run manually from the Actions tab.
+
+## Adding content (resume, project reports, essays, maps)
+
+See [`CONTENT.md`](./CONTENT.md) for a step-by-step guide on where to drop
+your PDFs and images so they show up on the live site.
+
+## Project structure
+
+```
+src/
+  app.html
+  lib/
+    Project.svelte         # Project card component
+    Reading.svelte         # Reading card component
+    projects.json          # Projects data (titles, tools, reports, links)
+    reading.json           # Reading data
+    writing.json           # Writing samples (Writing page)
+    maps.json              # ESPM 110 map deliverables (Maps page)
+  routes/
+    +layout.svelte         # Site header / nav / footer
+    +page.svelte           # Home
+    projects/+page.svelte  # Projects (with category filters)
+    maps/+page.svelte      # ArcGIS map gallery
+    writing/+page.svelte   # Essays
+    resume/+page.svelte    # Resume (PDF)
+    contact/+page.svelte   # Contact
+static/
+  images/                  # Site images
+  reports/                 # Project report PDFs
+  writing/                 # Essay PDFs
+  maps/                    # Map images
+  resume/                  # Resume PDF
+```
