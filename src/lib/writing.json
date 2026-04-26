@@ -1,0 +1,16 @@
+[
+  {
+    "id": "essay-1",
+    "title": "Essay: Add your first writing sample here",
+    "summary": "Drop your first essay PDF into static/writing/ and update src/lib/writing.json with its title, summary, and filename. This entry is a placeholder so the layout renders before files are added.",
+    "tags": ["Essay", "Writing"],
+    "file": "writing/essay-1.pdf"
+  },
+  {
+    "id": "essay-2",
+    "title": "Essay: Add your second writing sample here",
+    "summary": "Second placeholder entry. Edit src/lib/writing.json once your real essay PDFs are placed in static/writing/.",
+    "tags": ["Essay", "Writing"],
+    "file": "writing/essay-2.pdf"
+  }
+]
