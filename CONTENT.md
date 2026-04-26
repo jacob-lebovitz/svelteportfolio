@@ -2,24 +2,24 @@
 
 The site is wired up to read assets from a few well-known folders under `static/`.
 Drop your real PDFs and images into the locations below and they will start
-appearing on the live site automatically. Filenames are case-sensitive and must
-match exactly what is referenced from the JSON files in `src/lib/`.
+appearing on the live site automatically.
 
 ## 1. Resume
 
-Put the resume PDF here:
+The resume PDF lives at:
 
 ```
 static/resume/Jacob-Lebovitz-Resume.pdf
 ```
 
-The Resume page already links to that exact path with both an "Open PDF in new
-tab" button and a "Download PDF" button.
+The Resume page links to that exact path with both an "Open PDF in new tab"
+button and a "Download PDF" button. Replacing the file in place is all that's
+needed to update the public resume.
 
 ## 2. Project reports (MIT projects)
 
 Each project that should show a "View report ↗" link references a report file
-in `src/lib/projects.json` via its `report` field. The current expectations are:
+in `src/lib/projects.json` via its `report` field. Current expectations:
 
 | Project                                       | Drop the report PDF at                |
 | --------------------------------------------- | ------------------------------------- |
@@ -32,14 +32,15 @@ relevant project in `src/lib/projects.json`.
 
 The Conagra capstone, the marketing / Kaggle project, and the ESPM mapping
 work are intentionally tagged `noReport: true` and do not show a report link
-(per the prompt — Conagra is high-level only, the Kaggle project is summarized
+(per the brief — Conagra is high-level only, the Kaggle project is summarized
 as evidence of product-analytics work, and the ESPM mapping work is shown via
 the dedicated Maps page).
 
 ## 3. Writing samples (essays)
 
-Drop your essay PDFs in `static/writing/` and edit `src/lib/writing.json` to
-list each one. The current placeholders look like:
+Drop each essay PDF into `static/writing/` and add an entry to
+`src/lib/writing.json`. The page shows a clear "Coming soon" state until at
+least one entry is added. Each entry takes the form:
 
 ```json
 [
@@ -53,12 +54,12 @@ list each one. The current placeholders look like:
 ]
 ```
 
-Each essay card opens the PDF in a new tab.
+Each card opens the PDF in a new tab.
 
 ## 4. ESPM 110 maps
 
-Drop the map images (PNG or JPG) in `static/maps/` and edit `src/lib/maps.json`
-to list them. The current placeholders are `maps/map-1.png` and `maps/map-2.png`.
+Drop the map images (PNG or JPG) in `static/maps/` and add entries to
+`src/lib/maps.json`:
 
 ```json
 [
@@ -71,9 +72,22 @@ to list them. The current placeholders are `maps/map-1.png` and `maps/map-2.png`
 ]
 ```
 
-## 5. Re-deploying
+The Maps page shows a clear "Coming soon" state until at least one entry is
+added.
 
-The GitHub Action in `.github/workflows/deploy.yml` already builds and
-deploys the site to GitHub Pages on every push to `main` (and supports manual
-runs). Once you commit the files above and push to `main`, the site will
-redeploy automatically.
+## 5. Project images
+
+Project cards use uniform SVG graphics in `static/images/projects/`. They are
+intentionally simple, monochromatic, and consistent across every project so the
+focus stays on the work itself. The Conagra entry uses a custom red mark that
+nods to Conagra's brand color without using a copyrighted logo asset.
+
+If you'd like to switch a project to a different graphic, edit its `image`
+field in `src/lib/projects.json`.
+
+## 6. Re-deploying
+
+The GitHub Action in `.github/workflows/deploy.yml` builds and deploys the
+site to GitHub Pages on every push to `main` (and supports manual runs from
+the Actions tab). Once you commit content updates and push to `main`, the site
+will redeploy automatically.

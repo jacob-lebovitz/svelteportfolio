@@ -1,14 +1,1 @@
-[
-  {
-    "id": "map-1",
-    "title": "ESPM 110 · Map 1",
-    "caption": "Spatial analysis output from UC Berkeley's ESPM 110. Replace this entry once the actual map image is added to static/maps/.",
-    "image": "maps/map-1.png"
-  },
-  {
-    "id": "map-2",
-    "title": "ESPM 110 · Map 2",
-    "caption": "Second ArcGIS map deliverable. Update src/lib/maps.json with the real title and caption when the image is available.",
-    "image": "maps/map-2.png"
-  }
-]
+[]
