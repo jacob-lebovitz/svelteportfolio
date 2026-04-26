@@ -5,15 +5,23 @@
   import readings from "$lib/reading.json";
   import { base } from "$app/paths";
 
-  const skills = [
-    { name: "Python", level: 95 },
-    { name: "SQL", level: 90 },
-    { name: "Julia", level: 85 },
-    { name: "R", level: 80 },
-    { name: "Machine Learning", level: 90 },
-    { name: "Optimization (AMPL / JuMP)", level: 88 },
-    { name: "Data Visualization", level: 85 },
-    { name: "ArcGIS", level: 75 },
+  const skillGroups = [
+    {
+      heading: "Languages",
+      items: ["Python", "SQL", "R", "Julia", "AMPL"],
+    },
+    {
+      heading: "Machine learning & analytics",
+      items: ["scikit-learn", "Keras", "PyTorch", "Pandas", "Forecasting (ARIMA, GBMs)"],
+    },
+    {
+      heading: "Optimization",
+      items: ["JuMP", "AMPL", "Mixed-Integer Programming", "Routing"],
+    },
+    {
+      heading: "Platforms & tools",
+      items: ["Databricks", "Tableau", "Power BI", "Streamlit", "Azure", "ArcGIS", "Git"],
+    },
   ];
 
   const featured = projects.filter((p) => p.featured);
@@ -21,21 +29,26 @@
 
 <svelte:head>
   <title>Jacob Lebovitz · Data Scientist</title>
-  <meta name="description" content="Jacob Lebovitz — MIT Master of Business Analytics candidate, data scientist focused on machine learning, optimization, and analytics for impact." />
+  <meta
+    name="description"
+    content="Jacob Lebovitz — MIT Master of Business Analytics candidate. Data scientist focused on machine learning, optimization, and forecasting for industry and public-sector problems."
+  />
 </svelte:head>
 
 <section class="hero">
   <div class="hero-text">
-    <p class="eyebrow">Data Scientist · MIT MBAn '26</p>
+    <p class="eyebrow">MIT Master of Business Analytics · Class of 2026</p>
     <h1 class="name-title">Jacob Lebovitz</h1>
+    <p class="role">Data Scientist</p>
     <p class="lede">
-      I build machine-learning and optimization systems that turn messy real-world data into
-      decisions. Currently at <strong>MIT Sloan</strong> studying Business Analytics, with prior
-      data-science work at <strong>Verdagy</strong>, the <strong>Boston Public Health Commission</strong>,
-      and <strong>UC Berkeley</strong>.
+      I build machine-learning and optimization systems that turn messy real-world data
+      into decisions. Currently a Data Science Capstone Intern with
+      <strong>Conagra Brands</strong> through MIT Sloan, with prior data-science work at
+      <strong>Verdagy</strong>, the <strong>Boston Public Health Commission</strong>, and
+      <strong>UC Berkeley</strong>.
     </p>
     <div class="cta-row">
-      <a class="cta primary" href="{base}/projects">View Projects →</a>
+      <a class="cta primary" href="{base}/projects">View projects</a>
       <a class="cta" href="{base}/resume">Resume</a>
       <a class="cta" href="{base}/contact">Contact</a>
     </div>
@@ -44,22 +57,21 @@
   <img
     class="headshot"
     src="{base}/images/headshot.JPG"
-    alt="Photo of Jacob Lebovitz smiling in front of Doe Library at UC Berkeley"
+    alt="Photo of Jacob Lebovitz"
   />
 </section>
 
 <section class="skills-section">
-  <h2>What I work with</h2>
+  <h2>Tools &amp; methods</h2>
   <div class="skills-grid">
-    {#each skills as s}
-      <div class="skill">
-        <div class="skill-row">
-          <span class="skill-name">{s.name}</span>
-          <span class="skill-pct">{s.level}%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="--pct: {s.level}%"></div>
-        </div>
+    {#each skillGroups as g}
+      <div class="skill-group">
+        <h3>{g.heading}</h3>
+        <ul>
+          {#each g.items as item}
+            <li>{item}</li>
+          {/each}
+        </ul>
       </div>
     {/each}
   </div>
@@ -67,7 +79,7 @@
 
 <section>
   <div class="section-head">
-    <h2>Featured Projects</h2>
+    <h2>Featured projects</h2>
     <a class="see-all" href="{base}/projects">See all projects →</a>
   </div>
   <div class="projects featured-grid">
@@ -78,142 +90,128 @@
 </section>
 
 <section class="reading-section">
-  <div>
-    <h2>Recent Reading</h2>
-    <p class="muted">A few books and shows that have been on rotation lately.</p>
-    <div class="readings">
-      {#each readings as r}
-        <Reading data={r} />
-      {/each}
-    </div>
+  <h2>Recent reading</h2>
+  <p class="muted">A few books and shows that have been on rotation lately.</p>
+  <div class="readings">
+    {#each readings as r}
+      <Reading data={r} />
+    {/each}
   </div>
 </section>
 
 <style>
   .hero {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 3rem;
     align-items: center;
-    padding: 2.5rem 0 3rem;
-    border-bottom: 1px solid color-mix(in oklch, var(--color-accent), transparent 80%);
+    padding: 2rem 0 2.5rem;
+    border-bottom: 1px solid var(--rule);
     margin-bottom: 2.5rem;
   }
 
   .eyebrow {
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--color-accent);
-    margin: 0 0 0.5rem;
+    color: var(--muted);
+    margin: 0 0 0.6rem;
   }
 
   .name-title {
-    font-size: clamp(3rem, 7vw, 5rem);
-    font-weight: 800;
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-weight: 700;
     line-height: 1;
-    margin: 0 0 1rem;
-    background-image: linear-gradient(120deg, #4facfe, #6a5acd, #36dc9a);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shimmer 8s linear infinite;
+    margin: 0;
+    letter-spacing: -0.01em;
   }
 
-  @keyframes shimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
+  .role {
+    margin: 0.4rem 0 1rem;
+    font-size: 1.05rem;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
 
   .lede {
-    font-size: 1.1rem;
+    font-size: 1.02rem;
     line-height: 1.6;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.4rem;
     max-width: 60ch;
   }
 
   .cta-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.6rem;
   }
 
   .cta {
     display: inline-block;
-    padding: 0.6em 1.1em;
-    border-radius: 999px;
-    border: 1.5px solid color-mix(in oklch, var(--color-accent), transparent 60%);
+    padding: 0.55em 1.1em;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
     text-decoration: none;
     color: inherit;
-    font-weight: 600;
-    transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
   }
   .cta:hover {
-    transform: translateY(-1px);
-    background-color: color-mix(in oklch, var(--color-accent), canvas 88%);
-    border-color: var(--color-accent);
+    background-color: var(--surface-2);
+    border-color: var(--rule-strong);
   }
   .cta.primary {
-    background-color: var(--color-accent);
-    color: white;
-    border-color: var(--color-accent);
+    background-color: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
   }
   .cta.primary:hover {
-    background-color: color-mix(in oklch, var(--color-accent), black 10%);
+    background-color: var(--ink-soft);
+    border-color: var(--ink-soft);
   }
 
   .headshot {
     width: 100%;
-    max-width: 420px;
+    max-width: 360px;
     justify-self: end;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border: 1px solid var(--rule);
   }
 
   .skills-section {
     margin-bottom: 2.5rem;
   }
+  .skills-section h2 {
+    margin: 0 0 1rem;
+  }
 
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 0.9rem 1.4rem;
-    margin-top: 1rem;
+    gap: 1.5rem 2rem;
   }
 
-  .skill-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .skill-name {
+  .skill-group h3 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
     font-weight: 600;
+    margin: 0 0 0.5rem;
   }
 
-  .skill-pct {
-    color: color-mix(in oklch, currentColor, transparent 40%);
-    font-variant-numeric: tabular-nums;
+  .skill-group ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    font-size: 0.95rem;
   }
-
-  .skill-bar {
-    height: 6px;
-    background-color: color-mix(in oklch, var(--color-accent), transparent 88%);
-    border-radius: 999px;
-    overflow: hidden;
-  }
-  .skill-fill {
-    width: 0;
-    height: 100%;
-    background-image: linear-gradient(90deg, #4facfe, var(--color-accent));
-    border-radius: 999px;
-    animation: fillbar 1.4s ease forwards;
-  }
-  @keyframes fillbar {
-    to { width: var(--pct); }
+  .skill-group li {
+    padding: 0;
   }
 
   .section-head {
@@ -222,17 +220,25 @@
     align-items: baseline;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .section-head h2 {
+    margin: 0;
   }
   .see-all {
-    color: var(--color-accent);
+    color: inherit;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
   }
-  .see-all:hover { text-decoration: underline; }
+  .see-all:hover {
+    color: var(--ink);
+  }
 
   .featured-grid {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .reading-section {
@@ -241,11 +247,12 @@
   .reading-section .readings {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: 1rem 1.5rem;
+    margin-top: 1rem;
   }
 
   .muted {
-    color: color-mix(in oklch, currentColor, transparent 40%);
+    color: var(--muted);
     margin-top: 0.25rem;
   }
 
@@ -253,8 +260,10 @@
     .hero {
       grid-template-columns: 1fr;
       gap: 1.5rem;
-      text-align: left;
     }
-    .headshot { justify-self: start; max-width: 280px; }
+    .headshot {
+      justify-self: start;
+      max-width: 240px;
+    }
   }
 </style>

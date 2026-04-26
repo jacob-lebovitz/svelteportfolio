@@ -61,100 +61,109 @@
   .project-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid color-mix(in oklch, var(--color-accent), transparent 80%);
-    border-radius: 14px;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
     overflow: hidden;
-    background-color: color-mix(in oklch, canvas, var(--color-accent) 3%);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    background-color: var(--paper);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
   .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
-    border-color: color-mix(in oklch, var(--color-accent), transparent 50%);
+    border-color: var(--rule-strong);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
   }
 
   .project-img {
     width: 100%;
-    height: 160px;
+    aspect-ratio: 8 / 5;
     object-fit: cover;
     display: block;
+    border-bottom: 1px solid var(--rule);
   }
 
   .project-body {
     padding: 1rem 1.1rem 1.1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.55rem;
     flex: 1;
   }
 
   h2 {
     margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.25;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    font-weight: 600;
   }
 
   .subtitle {
-    margin: 0.25rem 0 0;
-    color: color-mix(in oklch, currentColor, transparent 35%);
-    font-size: 0.92rem;
+    margin: 0.2rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
   }
 
   .tags {
     list-style: none;
-    margin: 0;
+    margin: 0.1rem 0 0.2rem;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem;
+    gap: 0.3rem;
   }
   .tags li {
     font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    padding: 0.18em 0.6em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 0.18em 0.55em;
     border-radius: 999px;
-    background-color: color-mix(in oklch, var(--color-accent), canvas 80%);
-    color: color-mix(in oklch, var(--color-accent), currentColor 30%);
-    border: 1px solid color-mix(in oklch, var(--color-accent), transparent 70%);
+    background-color: var(--surface-2);
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
   }
 
   .highlights {
     margin: 0;
     padding-left: 1.1rem;
-    font-size: 0.92rem;
-    line-height: 1.45;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
   }
   .highlights li { margin-bottom: 0.2rem; }
 
   .desc {
     font-size: 0.92rem;
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0;
+    color: var(--ink-soft);
   }
 
   .links {
     margin-top: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem 1rem;
+    gap: 0.5rem 1rem;
     padding-top: 0.4rem;
+    align-items: center;
   }
 
   .link {
-    color: var(--color-accent);
+    color: var(--ink);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 0.88rem;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 1px;
   }
-  .link:hover { text-decoration: underline; }
+  .link:hover {
+    border-bottom-color: var(--ink);
+  }
 
   .status {
-    font-size: 0.78rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 500;
     padding: 0.15em 0.55em;
     border-radius: 999px;
-    background-color: color-mix(in oklch, var(--color-accent), transparent 80%);
-    color: var(--color-accent);
+    background-color: var(--surface-2);
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
   }
 </style>

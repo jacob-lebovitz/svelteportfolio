@@ -47,9 +47,9 @@
   <label class="color-scheme-switch">
     <span class="sr">Theme</span>
     <select bind:value={colorScheme}>
-      <option value="light">light</option>
-      <option value="dark">dark</option>
-      <option value="light dark">auto</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="light dark">Auto</option>
     </select>
   </label>
 </header>
@@ -72,9 +72,9 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 1.5rem;
-    padding: 0.5rem 0 0.25rem;
+    padding: 0.75rem 0;
     margin-bottom: 1rem;
-    border-bottom: 1px solid color-mix(in oklch, var(--color-accent), transparent 80%);
+    border-bottom: 1px solid var(--rule);
   }
 
   .brand {
@@ -83,28 +83,39 @@
     gap: 0.6rem;
     text-decoration: none;
     color: inherit;
-    font-weight: 700;
+    font-weight: 600;
   }
   .brand-mark {
     width: 2rem;
     height: 2rem;
-    border-radius: 8px;
-    background-image: linear-gradient(135deg, #4facfe, var(--color-accent));
-    color: white;
-    font-size: 0.85rem;
+    border-radius: 6px;
+    background-color: var(--ink);
+    color: var(--paper);
+    font-size: 0.78rem;
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.06em;
+  }
+  .brand-text {
+    font-size: 0.98rem;
   }
 
   .color-scheme-switch {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 80%;
+    font-size: 0.85rem;
+    color: var(--muted);
     justify-self: end;
+  }
+  .color-scheme-switch select {
+    padding: 0.3em 0.5em;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background-color: var(--paper);
+    color: var(--ink);
   }
   .sr {
     position: absolute;
@@ -118,34 +129,28 @@
     border: 0;
   }
 
-  :root {
-    color-scheme: dark;
-  }
-
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25rem 0.25rem;
+    gap: 0.1rem;
     justify-content: center;
   }
 
   nav a {
     text-align: center;
     text-decoration: none;
-    color: inherit;
-    padding: 0.45em 0.8em;
-    border-radius: 8px;
+    color: var(--ink);
+    padding: 0.4em 0.85em;
+    font-size: 0.95rem;
     border-bottom: 2px solid transparent;
-    transition: background-color 0.15s ease, border-color 0.15s ease;
+    transition: border-color 0.15s ease, color 0.15s ease;
   }
-
-  nav a.current {
-    border-bottom-color: var(--color-accent);
-  }
-
   nav a:hover {
-    background-color: color-mix(in oklch, var(--color-accent), canvas 88%);
-    border-bottom-color: var(--color-accent);
+    border-bottom-color: var(--rule-strong);
+  }
+  nav a.current {
+    border-bottom-color: var(--ink);
+    font-weight: 600;
   }
 
   main {
@@ -155,14 +160,13 @@
   .site-footer {
     margin-top: 4rem;
     padding: 1.25rem 0;
-    border-top: 1px solid color-mix(in oklch, var(--color-accent), transparent 80%);
+    border-top: 1px solid var(--rule);
     text-align: center;
     font-size: 0.85rem;
-    color: color-mix(in oklch, currentColor, transparent 35%);
+    color: var(--muted);
   }
   .site-footer a {
     color: inherit;
-    text-decoration: underline;
   }
 
   @media (max-width: 720px) {
@@ -173,6 +177,10 @@
     nav {
       grid-column: 1 / -1;
       justify-content: flex-start;
+      gap: 0;
+    }
+    nav a {
+      padding: 0.4em 0.6em;
     }
   }
 </style>

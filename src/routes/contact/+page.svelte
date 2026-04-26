@@ -16,24 +16,22 @@
     <h2>Direct</h2>
     <ul>
       <li>
-        <a href="mailto:107650576+jacob-lebovitz@users.noreply.github.com">
-          Email me
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/jacob-lebovitz" target="_blank" rel="noopener noreferrer">
-          GitHub · @jacob-lebovitz ↗
-        </a>
+        <a href="mailto:jmlebo@mit.edu">jmlebo@mit.edu</a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/jacob-lebovitz/" target="_blank" rel="noopener noreferrer">
           LinkedIn ↗
         </a>
       </li>
+      <li>
+        <a href="https://github.com/jacob-lebovitz" target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      </li>
     </ul>
   </aside>
 
-  <form action="mailto:107650576+jacob-lebovitz@users.noreply.github.com" method="GET">
+  <form action="mailto:jmlebo@mit.edu" method="GET">
     <label>
       Your Email
       <input name="email" type="email" required />
@@ -56,15 +54,15 @@
 <style>
   .page-head { margin: 1.5rem 0 1.75rem; }
   .page-head h1 {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
     margin: 0.2rem 0 0.5rem;
   }
   .eyebrow {
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--muted);
     margin: 0;
   }
   .lede { max-width: 70ch; line-height: 1.6; margin: 0; }
@@ -77,10 +75,10 @@
   }
 
   .contact-card {
-    border: 1px solid color-mix(in oklch, var(--color-accent), transparent 80%);
-    border-radius: 14px;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
     padding: 1.1rem 1.25rem;
-    background-color: color-mix(in oklch, canvas, var(--color-accent) 3%);
+    background-color: var(--surface);
   }
   .contact-card h2 { margin-top: 0; font-size: 1.1rem; }
   .contact-card ul {
